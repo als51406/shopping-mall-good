@@ -51,12 +51,16 @@ const AdminProductsPage = () => {
             <input type="file" accept="image/*" onChange={async (e)=>{
               const file = e.target.files?.[0];
               if (!file) return;
-              const reader = new FileReader();
-              reader.onload = ()=>{
-                const result = reader.result as string | null;
-                if (result) setForm(f=>({...f,image: result}));
-              };
-              reader.readAsDataURL(file);
+              const fd = new FormData();
+              fd.append('file', file);
+              try {
+                const base = (window as any).__UPLOAD_URL__ || 'http://localhost:4000';
+                const res = await fetch(base + '/upload', { method: 'POST', body: fd });
+                const json = await res.json();
+                if (json.url) setForm(f=>({...f,image: json.url}));
+              } catch (err) {
+                alert('업로드 실패');
+              }
             }} />
           </div>
           <input placeholder="설명" value={form.description} onChange={e=>setForm(f=>({...f,description:e.target.value}))} />
