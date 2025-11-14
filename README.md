@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # shopping-mall-good
 =======
 # shopping-mall-good
