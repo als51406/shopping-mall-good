@@ -1,41 +1,37 @@
 import type { Product } from '../types';
-import products from '../data/products';
+
+const API_BASE = '/api';
 
 export const fetchProducts = async (): Promise<Product[]> => {
-  // simulate async API
-  return Promise.resolve(products);
+  const res = await fetch(`${API_BASE}/products`);
+  return res.json();
 };
 
 export const getProductById = async (id: string): Promise<Product | null> => {
-  const found = products.find(p => p.id === id) ?? null;
-  return Promise.resolve(found);
+  const res = await fetch(`${API_BASE}/products/${id}`);
+  if (res.status === 404) return null;
+  return res.json();
 };
 
 export const searchProducts = async (q: string): Promise<Product[]> => {
-  const term = q.trim().toLowerCase();
-  if (!term) return Promise.resolve(products);
-  return Promise.resolve(products.filter(p => p.name.toLowerCase().includes(term) || (p.description||'').toLowerCase().includes(term)));
+  if (!q.trim()) return fetchProducts();
+  const res = await fetch(`${API_BASE}/products?q=${encodeURIComponent(q)}`);
+  return res.json();
 };
 
-// Simple in-memory CRUD for admin UI (mutates `products` array)
 export const addProduct = async (p: Omit<Product, 'id'>): Promise<Product> => {
-  const id = String(Number(products[products.length-1]?.id ?? 0) + 1);
-  const np: Product = { id, ...p };
-  products.push(np);
-  return Promise.resolve(np);
+  const res = await fetch(`${API_BASE}/products`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(p) });
+  return res.json();
 };
 
 export const updateProduct = async (id: string, patch: Partial<Product>): Promise<Product | null> => {
-  const idx = products.findIndex(x => x.id === id);
-  if (idx === -1) return Promise.resolve(null);
-  products[idx] = { ...products[idx], ...patch };
-  return Promise.resolve(products[idx]);
+  const res = await fetch(`${API_BASE}/products/${id}`, { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(patch) });
+  if (res.status === 404) return null;
+  return res.json();
 };
 
 export const deleteProduct = async (id: string): Promise<boolean> => {
-  const idx = products.findIndex(x => x.id === id);
-  if (idx === -1) return Promise.resolve(false);
-  products.splice(idx, 1);
-  return Promise.resolve(true);
+  const res = await fetch(`${API_BASE}/products/${id}`, { method: 'DELETE' });
+  return res.ok;
 };
 
