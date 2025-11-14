@@ -27,7 +27,7 @@ const ProductCardNormal = ({ product }: ProductCardProps) => {
         </div>
       </div>
 
-      <h3>{product.name}</h3>
+      <h3 style={{height:"40px"}}>{product.name}</h3>
 
       <p className='pcn-price'>{product.price}<span>원</span></p>
      

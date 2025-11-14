@@ -5,6 +5,7 @@ import { fetchProducts } from '../services/api';
 import type { Product } from '../types';
 import HomeBest from '../components/HomeBest';
 import './HomePage.css'
+import recommendProducts from '../data/recommendProducts';
 
 const HomePage = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -22,8 +23,12 @@ const HomePage = () => {
 
 
 
-  {/* 상품 섹션 */}
+  {/* 홈 상단 특가 상품 섹션 */}
   <HomeBest products={products} images={images} length={4} />
+
+
+    {/* 홈 추천 상품 섹션 */}
+  <HomeBest products={recommendProducts} images={images} length={4} title="오늘의 추천 상품" containerWidth="1000px" />
     </div>
   );
 };
