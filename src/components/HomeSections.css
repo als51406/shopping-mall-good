@@ -1,0 +1,45 @@
+/* Shared styles for Home page sections: banner and best products */
+.banner-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.banner-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+#homeWrap {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.products-section {
+  background: #fff;
+}
+
+.products-section h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  margin: 0 0 16px 0;
+}
+
+.product-row {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+@media (max-width: 1100px) {
+  .products-section {
+    width: 100%;
+    padding: 0 16px;
+  }
+}
