@@ -7,7 +7,7 @@ import 'swiper/css/pagination';
 import { useEffect, useState } from 'react';
 import { fetchProducts } from '../services/api';
 import type { Product } from '../types';
-import ProductCard from '../components/ProductCard';
+import ProductCardNormal from '../components/ProductCardNormal';
 
 const HomePage = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -15,6 +15,8 @@ const HomePage = () => {
   useEffect(() => {
     fetchProducts().then(setProducts);
   }, []);
+
+  const images = ['/images/item1.jpg','/images/item2.jpg','/images/item3.jpg','/images/item4.jpg','/images/item5.jpg'];
 
   return (
     <div>
@@ -52,11 +54,12 @@ const HomePage = () => {
 
       {/* 상품 섹션 */}
       <section className="products-section">
-        <h2>추천 상품</h2>
-        <div className="product-grid">
-          {products.map(product => (
-            <ProductCard key={product.id} product={product} />
-          ))}
+        <h2 style={{padding:"100px 10px"}}>추천 상품</h2>
+        <div className="product-row" style={{display:'flex',gap:16,justifyContent:'center',alignItems:'stretch'}}>
+          {Array.from({length:5}).map((_, i) => {
+            const p = products[i] ?? { id: `placeholder-${i}`, name: `상품 ${i+1}`, price: 0, image: images[i] } as Product;
+            return <ProductCardNormal key={p.id} product={p} />;
+          })}
         </div>
       </section>
     </div>
