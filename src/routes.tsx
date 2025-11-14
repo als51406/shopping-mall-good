@@ -11,6 +11,7 @@ import ProfilePage from './pages/ProfilePage';
 import AboutPage from './pages/AboutPage';
 import ContactPage from './pages/ContactPage';
 import PromoPage from './pages/PromoPage';
+import MorePage from './pages/MorePage';
 
 const AppRoutes = () => (
   <BrowserRouter>
@@ -25,6 +26,7 @@ const AppRoutes = () => (
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/profile" element={<ProfilePage />} />
         <Route path="/about" element={<AboutPage />} />
+  <Route path="/more" element={<MorePage />} />
   <Route path="/promo" element={<PromoPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>

@@ -65,7 +65,7 @@ const Header: React.FC = () => {
       </section>
       <section className="main-header-wrap">
         <div className='main-header'>
-            <h1 className="logo"><a href="/">쇼오핑몰</a></h1>
+            <h1 className="logo"><a href="/">고오급 쇼오핑몰</a></h1>
             <form className="search" onSubmit={submit}>
               <input value={q} onChange={e => setQ(e.target.value)} placeholder="검색어를 입력해주세요" />
               <button type="submit">🔍</button>
@@ -77,14 +77,25 @@ const Header: React.FC = () => {
             </div>
           </div>
       </section>
-      <nav className="main-nav">
-        <Link to="/">카테고리</Link>
-        <Link to="/products">베스트</Link>
-        <Link to="/products">단독</Link>
-        <Link to="/products">신상</Link>
-        <Link to="/products">세일</Link>
-        <Link to="/products">특가/혜택</Link>
-      </nav>
+      <section id='navWrap'>
+        <nav className="main-nav">
+          <Link to="/">
+          {/* <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -930 960 960" width="28px" fill="#1f1f1f"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg> */}
+          <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -920 960 960" width="24px" fill="#1f1f1f"><path d="M120-120v-80h720v80H120Zm0-320v-80h720v80H120Zm0-320v-80h720v80H120Z"/></svg>
+          카테고리
+          </Link>
+            <div className='nav-center'>
+              <Link to="/products">베스트</Link>
+              <Link to="/products">단독</Link>
+              <Link to="/products">신상</Link>
+              <Link to="/products">세일</Link>
+              <Link to="/products">특가/혜택</Link>
+            </div>
+          <div className='nav-right'>
+            <Link to="/more">더 알아보기</Link>
+          </div>
+        </nav>
+      </section>
     </header>
   );
 };
