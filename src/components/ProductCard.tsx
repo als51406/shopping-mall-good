@@ -1,9 +1,15 @@
-const ProductCard = () => {
+import type { Product } from '../types';
+
+interface ProductCardProps {
+  product: Product;
+}
+
+const ProductCard = ({ product }: ProductCardProps) => {
   return (
     <div className="product-card">
-      <img src="placeholder.jpg" alt="Product" />
-      <h3>Product Name</h3>
-      <p>$10.00</p>
+      <img src={product.image || 'images/ro1.png'} alt={product.name} />
+      <h3>{product.name}</h3>
+      <p>${product.price.toFixed(2)}</p>
       <button>Add to Cart</button>
     </div>
   );
