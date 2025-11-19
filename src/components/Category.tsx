@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import categoriesData from '../data/categories';
 import type { Category as CategoryType } from '../data/categories';
 import { Link } from 'react-router-dom';
@@ -6,25 +6,34 @@ import './Category.css';
 
 type Props = {
   categories?: CategoryType[];
+  closeDelay?: number; // milliseconds to wait before closing the panel on mouseleave
 };
 
-const Category: React.FC<Props> = ({ categories = categoriesData }) => {
+const Category: React.FC<Props> = ({ categories = categoriesData, closeDelay = 50 }) => {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState<string | null>(null);
+  const timer = useRef<number | null>(null);
+
+  useEffect(() => {
+    return () => { if (timer.current) window.clearTimeout(timer.current); };
+  }, []);
 
   return (
     <div
       className="category-wrapper"
-      onMouseEnter={() => setOpen(true)}
-      onMouseLeave={() => { setOpen(false); setActive(null); }}
+  onMouseEnter={() => { if (timer.current) window.clearTimeout(timer.current); setOpen(true); }}
+  onMouseLeave={() => { if (timer.current) window.clearTimeout(timer.current); timer.current = window.setTimeout(()=>{ setOpen(false); setActive(null); }, closeDelay); }}
     >
-      <button className="category-trigger">카테고리</button>
+  <button className="category-trigger" type="button">카테고리</button>
       <div className={`category-panel ${open ? 'open' : ''}`}>
         <div className="category-left">
           <ul>
             {categories.map((c) => (
-              <li key={c.id} onMouseEnter={() => setActive(c.id)} onFocus={() => setActive(c.id)}>
-                <Link to={`/products?cat=${c.id}`}>{c.icon ? `${c.icon} ` : ''}{c.name}</Link>
+              <li key={c.id} className={active===c.id? 'active':''} onMouseEnter={() => { if (timer.current) window.clearTimeout(timer.current); setActive(c.id); }} onFocus={() => setActive(c.id)}>
+                <Link to={`/products?cat=${c.id}`}>
+                  <span className="category-icon">{c.icon}</span>
+                  <span className="category-name">{c.name}</span>
+                </Link>
               </li>
             ))}
           </ul>
