@@ -3,6 +3,7 @@ import './Header.css';
 import { useState } from 'react';
 import useCart from '../hooks/useCart';
 import { useAuth } from '../context/AuthContext';
+import Category from './Category';
 
 const Header: React.FC = () => {
   const [q, setQ] = useState('');
@@ -79,11 +80,7 @@ const Header: React.FC = () => {
       </section>
       <section id='navWrap'>
         <nav className="main-nav">
-          <Link to="/">
-          {/* <svg xmlns="http://www.w3.org/2000/svg" height="28px" viewBox="0 -930 960 960" width="28px" fill="#1f1f1f"><path d="M120-240v-66.67h720V-240H120Zm0-206.67v-66.66h720v66.66H120Zm0-206.66V-720h720v66.67H120Z"/></svg> */}
-          <svg xmlns="http://www.w3.org/2000/svg" height="18px" viewBox="0 -920 960 960" width="24px" fill="#1f1f1f"><path d="M120-120v-80h720v80H120Zm0-320v-80h720v80H120Zm0-320v-80h720v80H120Z"/></svg>
-          카테고리
-          </Link>
+          <Category />
             <div className='nav-center'>
               <Link to="/products">베스트</Link>
               <Link to="/products">단독</Link>
