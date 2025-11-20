@@ -30,7 +30,7 @@ const Category: React.FC<Props> = ({ categories = categoriesData, closeDelay = 5
           <ul>
             {categories.map((c) => (
               <li key={c.id} className={active===c.id? 'active':''} onMouseEnter={() => { if (timer.current) window.clearTimeout(timer.current); setActive(c.id); }} onFocus={() => setActive(c.id)}>
-                <Link to={`/products?cat=${c.id}`}>
+                <Link to={`/products?category=${c.id}`}>
                   <span className="category-icon">{c.icon}</span>
                   <span className="category-name">{c.name}</span>
                 </Link>

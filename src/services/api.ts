@@ -35,3 +35,8 @@ export const deleteProduct = async (id: string): Promise<boolean> => {
   return res.ok;
 };
 
+export const getProductsByCategory = async (category: string): Promise<Product[]> => {
+  const res = await fetch(`${API_BASE}/products?category=${encodeURIComponent(category)}`);
+  return res.json();
+};
+

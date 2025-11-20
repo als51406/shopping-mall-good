@@ -16,9 +16,9 @@ type Props = {
 
 const AdBanner: React.FC<Props> = ({
   slides = [
-    { title: '광고 1', subtitle: '특별 혜택', bg: '#6a2ea8' },
-    { title: '광고 2', subtitle: '신상품 출시', bg: '#ff6b6b' },
-    { title: '광고 3', subtitle: '한정 수량', bg: '#4ecdc4' },
+    { title: '정기배송 런칭', subtitle: '매일 아침 문 앞으로 배송되는 신선함', bg: '#6A2EA8' },
+    { title: '신규 회원 이벤트', subtitle: '첫 구매 시 인기 샐러드 100원', bg: '#4CAF50' },
+    { title: '리뷰 이벤트', subtitle: '포토 리뷰 작성 시 적립금 2배', bg: '#FF6B6B' },
   ],
   height = 200,
   autoplayDelay = 3000,
@@ -26,7 +26,7 @@ const AdBanner: React.FC<Props> = ({
   className = '',
 }) => {
   return (
-    <section style={{width:"1050px"}} className={`ad-banner ${className}`}>
+    <section style={{width: "100%", maxWidth: "1000px", margin: "0 auto"}} className={`ad-banner ${className}`}>
       <Swiper modules={[Autoplay]} spaceBetween={0} slidesPerView={1} autoplay={{ delay: autoplayDelay, disableOnInteraction: false }} loop={loop}>
         {slides.map((s, idx) => (
           <SwiperSlide key={idx}>

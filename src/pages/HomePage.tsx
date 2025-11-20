@@ -25,11 +25,11 @@ const HomePage = () => {
 
 
   {/* 홈 상단 특가 상품 섹션 */}
-  <HomeBest products={products} images={images} length={4} />
+  <HomeBest products={products} images={images} />
 
 
     {/* 홈 추천 상품 섹션 */}
-  <HomeBest products={recommendProducts} images={images} length={4} title="오늘의 추천 상품" containerWidth="1000px" />
+  <HomeBest products={recommendProducts} images={images} title="오늘의 추천 상품" containerWidth="1000px" />
 
      {/* 광고 섹션 */}
      <section className='ADWrap' style={{width:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}>

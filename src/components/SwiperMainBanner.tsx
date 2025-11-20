@@ -17,9 +17,9 @@ type Props = {
 
 const SwiperMainBanner: React.FC<Props> = ({
   slides = [
-    { title: '첫 번째 배너', subtitle: '쇼핑몰에 오신 것을 환영합니다!', bg: '#6a2ea8' },
-    { title: '두 번째 배너', subtitle: '최고의 상품을 만나보세요.', bg: '#ff6b6b' },
-    { title: '세 번째 배너', subtitle: '특별 할인 이벤트!', bg: '#4ecdc4' },
+    { title: '건강한 식단 관리의 시작', subtitle: '신선한 샐러드와 닭가슴살을 만나보세요', bg: '#6A2EA8' },
+    { title: '이번 주 특가 상품', subtitle: '다이어트 도시락 최대 30% 할인', bg: '#4CAF50' },
+    { title: '신규 회원 혜택', subtitle: '가입 즉시 15,000원 쿠폰팩 증정', bg: '#FF6B6B' },
   ],
   height = 400,
   autoplayDelay = 3000,

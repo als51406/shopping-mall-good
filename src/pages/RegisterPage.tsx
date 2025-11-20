@@ -32,17 +32,17 @@ const RegisterPage: React.FC = () => {
   }
 
   return (
-    <div style={{padding:24, display:"flex",flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-      <h1>회원가입</h1>
-      <form onSubmit={submit} style={{display:'flex',flexDirection:'column',gap:8,maxWidth:420}}>
-        <input value={name} onChange={e => setName(e.target.value)} placeholder="이름" />
-        <input value={email} onChange={e => setEmail(e.target.value)} placeholder="이메일" type="email" />
-        <input value={password} onChange={e => setPassword(e.target.value)} placeholder="비밀번호" type="password" />
-        <input value={confirm} onChange={e => setConfirm(e.target.value)} placeholder="비밀번호 확인" type="password" />
-        {error && <div style={{color:'red'}}>{error}</div>}
-        <div style={{display:'flex',gap:8}}>
-          <button type="submit">회원가입</button>
-        </div>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "60px 20px", minHeight: "60vh" }}>
+      <h1 style={{ fontSize: "32px", marginBottom: "30px", color: "#333" }}>회원가입</h1>
+      <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%', maxWidth: '400px' }}>
+        <input value={name} onChange={e => setName(e.target.value)} placeholder="이름" style={{ padding: "14px", border: "1px solid #ddd", borderRadius: "8px", fontSize: "16px" }} />
+        <input value={email} onChange={e => setEmail(e.target.value)} placeholder="이메일" type="email" style={{ padding: "14px", border: "1px solid #ddd", borderRadius: "8px", fontSize: "16px" }} />
+        <input value={password} onChange={e => setPassword(e.target.value)} placeholder="비밀번호" type="password" style={{ padding: "14px", border: "1px solid #ddd", borderRadius: "8px", fontSize: "16px" }} />
+        <input value={confirm} onChange={e => setConfirm(e.target.value)} placeholder="비밀번호 확인" type="password" style={{ padding: "14px", border: "1px solid #ddd", borderRadius: "8px", fontSize: "16px" }} />
+        {error && <div style={{ color: '#FF6B6B', fontSize: '14px' }}>{error}</div>}
+        <button type="submit" style={{ background: "#6A2EA8", color: "#fff", padding: "16px", border: "none", borderRadius: "8px", fontSize: "16px", fontWeight: "bold", cursor: "pointer", marginTop: "10px" }}>
+          가입하기
+        </button>
       </form>
     </div>
   );

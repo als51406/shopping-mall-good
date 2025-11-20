@@ -6,7 +6,7 @@ const HomeRecommendPage: React.FC = () => {
   const images = recommendProducts.map(p => p.image || '');
   return (
     <div>
-      <HomeBest products={recommendProducts} images={images} length={4} title="오늘의 추천 상품" containerWidth="1000px" />
+      <HomeBest products={recommendProducts} images={images} title="오늘의 추천 상품" containerWidth="1000px" />
     </div>
   );
 };

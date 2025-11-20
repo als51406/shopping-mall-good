@@ -26,15 +26,30 @@ const LoginPage: React.FC = () => {
   }
 
   return (
-    <div style={{padding:24, display:"flex", flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
-      <h1>로그인</h1>
-      <form onSubmit={submit} style={{display:'flex',flexDirection:'column',gap:8,maxWidth:360}}>
-        <input value={email} onChange={e => setEmail(e.target.value)} placeholder="이메일" type="email" />
-        <input value={password} onChange={e => setPassword(e.target.value)} placeholder="비밀번호" type="password" />
-        {error && <div style={{color:'red'}}>{error}</div>}
-        <div style={{display:'flex',gap:8}}>
-          <button type="submit">로그인</button>
-          <Link to="/register" style={{alignSelf:'center'}}>회원가입</Link>
+    <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "60px 20px", minHeight: "60vh" }}>
+      <h1 style={{ fontSize: "32px", marginBottom: "30px", color: "#333" }}>로그인</h1>
+      <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%', maxWidth: '400px' }}>
+        <input 
+          value={email} 
+          onChange={e => setEmail(e.target.value)} 
+          placeholder="이메일" 
+          type="email" 
+          style={{ padding: "14px", border: "1px solid #ddd", borderRadius: "8px", fontSize: "16px" }}
+        />
+        <input 
+          value={password} 
+          onChange={e => setPassword(e.target.value)} 
+          placeholder="비밀번호" 
+          type="password" 
+          style={{ padding: "14px", border: "1px solid #ddd", borderRadius: "8px", fontSize: "16px" }}
+        />
+        {error && <div style={{ color: '#FF6B6B', fontSize: '14px' }}>{error}</div>}
+        <button type="submit" style={{ background: "#6A2EA8", color: "#fff", padding: "16px", border: "none", borderRadius: "8px", fontSize: "16px", fontWeight: "bold", cursor: "pointer", marginTop: "10px" }}>
+          로그인
+        </button>
+        <div style={{ display: 'flex', justifyContent: 'center', gap: '10px', marginTop: '10px', fontSize: '14px', color: '#666' }}>
+          <span>아직 회원이 아니신가요?</span>
+          <Link to="/register" style={{ color: "#6A2EA8", fontWeight: "bold" }}>회원가입</Link>
         </div>
       </form>
     </div>

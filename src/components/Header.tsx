@@ -82,11 +82,11 @@ const Header: React.FC = () => {
         <nav className="main-nav">
           <Category />
             <div className='nav-center'>
-              <Link to="/products">베스트</Link>
-              <Link to="/products">단독</Link>
-              <Link to="/products">신상</Link>
-              <Link to="/products">세일</Link>
-              <Link to="/products">특가/혜택</Link>
+              <Link to="/products?sort=best">베스트</Link>
+              <Link to="/products?sort=new">신상품</Link>
+              <Link to="/products?sort=sale">알뜰쇼핑</Link>
+              <Link to="/products?tag=diet">식단추천</Link>
+              <Link to="/products?tag=delivery">정기배송</Link>
             </div>
           <div className='nav-right'>
             <Link to="/more">더 알아보기</Link>
