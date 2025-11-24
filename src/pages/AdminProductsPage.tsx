@@ -74,11 +74,11 @@ const AdminProductsPage = () => {
                   const fd = new FormData();
                   fd.append('file', file);
                   try {
-                    const base = (window as any).__UPLOAD_URL__ || 'http://localhost:4000';
-                    const res = await fetch(base + '/upload', { method: 'POST', body: fd });
+                    // Use relative path to leverage Vite proxy
+                    const res = await fetch('/upload', { method: 'POST', body: fd });
                     const json = await res.json();
                     if (json.url) setForm(f => ({ ...f, image: json.url }));
-                  } catch (err) {
+                  } catch {
                     alert('업로드 실패');
                   }
                 }} 

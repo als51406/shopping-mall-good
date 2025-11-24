@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { fetchProducts } from '../services/api';
 import type { Product } from '../types';
 import HomeBest from '../components/HomeBest';
+import HomeRecommend from '../components/HomeRecommend';
 import './HomePage.css'
 import recommendProducts from '../data/recommendProducts';
 import AdBanner from '../components/AdBanner';
@@ -29,7 +30,7 @@ const HomePage = () => {
 
 
     {/* 홈 추천 상품 섹션 */}
-  <HomeBest products={recommendProducts} images={images} title="오늘의 추천 상품" containerWidth="1000px" />
+  <HomeRecommend products={recommendProducts} images={images} title="오늘의 추천 상품" containerWidth="1000px" />
 
      {/* 광고 섹션 */}
      <section className='ADWrap' style={{width:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}>

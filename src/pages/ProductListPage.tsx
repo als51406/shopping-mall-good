@@ -29,6 +29,12 @@ const ProductListPage = () => {
         data.sort((a, b) => a.price - b.price);
       } else if (sort === 'high_price') {
         data.sort((a, b) => b.price - a.price);
+      } else if (sort === 'new') {
+        data.sort((a, b) => Number(b.id) - Number(a.id)); // Assuming numeric IDs for simplicity, or just reverse
+      } else if (sort === 'sale') {
+        data.sort((a, b) => a.price - b.price); // Cheapest first for sale
+      } else if (sort === 'best') {
+        // Shuffle or specific logic. For now, let's just keep it as is or maybe sort by name
       }
       
       setProducts(data);
@@ -38,6 +44,9 @@ const ProductListPage = () => {
 
   const getTitle = () => {
     if (search) return `'${search}' 검색 결과`;
+    if (sort === 'best') return '베스트 상품';
+    if (sort === 'new') return '신상품';
+    if (sort === 'sale') return '알뜰 쇼핑';
     if (category) {
       const [main, sub] = category.split(':');
       const map: Record<string, string> = {

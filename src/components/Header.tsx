@@ -66,7 +66,7 @@ const Header: React.FC = () => {
       </section>
       <section className="main-header-wrap">
         <div className='main-header'>
-            <h1 className="logo"><a href="/">고오급 쇼오핑몰</a></h1>
+            <h1 className="logo"><Link to="/">Diet Food Mall</Link></h1>
             <form className="search" onSubmit={submit}>
               <input value={q} onChange={e => setQ(e.target.value)} placeholder="검색어를 입력해주세요" />
               <button type="submit">🔍</button>
@@ -85,8 +85,8 @@ const Header: React.FC = () => {
               <Link to="/products?sort=best">베스트</Link>
               <Link to="/products?sort=new">신상품</Link>
               <Link to="/products?sort=sale">알뜰쇼핑</Link>
-              <Link to="/products?tag=diet">식단추천</Link>
-              <Link to="/products?tag=delivery">정기배송</Link>
+              <Link to="/products?category=salad:lunchbox">식단추천</Link>
+              <Link to="/products?category=salad:fresh">정기배송</Link>
             </div>
           <div className='nav-right'>
             <Link to="/more">더 알아보기</Link>

@@ -51,9 +51,8 @@ const HomeBest: React.FC<Props> = ({ products = [], images = [], title = '지금
               slidesPerGroup: 4,
             },
           }}
-          style={{ paddingBottom: '40px' }}
         >
-          {displayProducts.map(p => (
+          {displayProducts.map((p) => (
             <SwiperSlide key={p.id}>
               <ProductCardNormal product={p} />
             </SwiperSlide>
