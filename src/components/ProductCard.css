@@ -1,0 +1,110 @@
+/* 큰 사이즈 상품 카드 - Best Menu 스타일 */
+.product-card-large {
+  width: 420px;
+  height: 530px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card-large:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.pc-image-container {
+  position: relative;
+  width: 420px;
+  height: 420px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.pc-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pc-discount-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: #fff;
+  color: #333;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pc-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+.pc-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.pc-description {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.pc-price-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.pc-price-sale {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1f1f1f;
+}
+
+.pc-price-original {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+/* 반응형 */
+@media (max-width: 1400px) {
+  .product-card-large {
+    width: 100%;
+    max-width: 420px;
+    height: auto;
+  }
+  
+  .pc-image-container {
+    width: 100%;
+    padding-top: 100%; /* 1:1 비율 유지 */
+    height: 0;
+    position: relative;
+  }
+  
+  .pc-image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

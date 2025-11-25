@@ -15,23 +15,88 @@
   color: #fff;
 }
 
+/* 메인 배너 Swiper 버튼 - 글래스모피즘 (호버 시 나타남) */
+.banner-section .swiper-button-next,
+.banner-section .swiper-button-prev {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  color: transparent !important;
+  margin: -20px 240px;
+  /* 기본적으로 숨김 */
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* 배너 호버 시 버튼 나타남 */
+.banner-section:hover .swiper-button-next,
+.banner-section:hover .swiper-button-prev {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 기본 화살표 완전히 숨기기 */
+.banner-section .swiper-button-next:after,
+.banner-section .swiper-button-prev:after {
+  content: '' !important;
+  display: none !important;
+  font-size: 0 !important;
+}
+
+/* SVG 화살표로 대체 */
+.banner-section .swiper-button-prev {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+}
+
+.banner-section .swiper-button-next {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+}
+
+/* 호버 시 배경만 변경 */
+.banner-section .swiper-button-next:hover,
+.banner-section .swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* 호버 시에도 화살표 유지 */
+.banner-section .swiper-button-prev:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.banner-section .swiper-button-next:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
 #homeWrap {
   display: flex;
   justify-content: center;
-  margin: 40px 0;
+  margin: 20px 0;
 }
 
 .products-section {
   background: #fff;
 }
 
-.products-section h2 {
+/* .products-section h2 {
   display: flex;
   align-items: center;
   gap: 12px;
   font-size: 20px;
   margin: 0 0 16px 0;
-}
+} */
 
 .product-row {
   display: flex;
@@ -79,9 +144,138 @@
   object-fit: cover;
 }
 
+/* Best Menu 섹션 전용 스타일 */
+.best-menu-section {
+  padding: 0px 20px;
+}
+
+.best-menu-title {
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin: 30px 0 20px 0;
+  display: block;
+}
+
+.best-menu-section .swiper {
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.best-menu-section .swiper-slide {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.best-menu-section .product-card-large {
+  margin: 0 auto;
+}
+
+/* Swiper 네비게이션 버튼 커스터마이징 - 글래스모피즘 */
+.best-menu-section .swiper-button-next,
+.best-menu-section .swiper-button-prev {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  /* 파란색 기본 버튼 완전히 제거 */
+  color: transparent !important;
+  margin: -120px auto;
+}
+
+/* Swiper 기본 화살표 완전히 숨기기 */
+.best-menu-section .swiper-button-next:after,
+.best-menu-section .swiper-button-prev:after {
+  content: '' !important;
+  display: none !important;
+  font-size: 0 !important;
+}
+
+/* SVG 화살표로 대체 */
+.best-menu-section .swiper-button-prev {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+}
+
+.best-menu-section .swiper-button-next {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px 24px;
+}
+
+/* 호버 시 배경만 변경 (화살표 유지) */
+.best-menu-section .swiper-button-next:hover,
+.best-menu-section .swiper-button-prev:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* 호버 시에도 화살표 유지 */
+.best-menu-section .swiper-button-prev:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.best-menu-section .swiper-button-next:hover {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.best-menu-section .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #ddd;
+  opacity: 1;
+}
+
+.best-menu-section .swiper-pagination-bullet-active {
+  background: #1f1f1f;
+}
+
+/* 추천 섹션 전용 스타일 */
+.recommend-section {
+  padding: 20px;
+}
+
+.recommend-section .recommend-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  margin: 0 0 16px 0;
+  font-weight: 500;
+}
+
+.recommend-section .product-row {
+  display: grid;
+  gap: 16px;
+}
+
 @media (max-width: 1100px) {
   .products-section {
     width: 100%;
     padding: 0 16px;
+  }
+  
+  .best-menu-section {
+    padding: 40px 16px;
+  }
+  
+  .best-menu-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .recommend-section {
+    padding: 20px 16px;
   }
 }

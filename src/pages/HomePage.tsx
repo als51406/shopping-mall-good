@@ -26,7 +26,7 @@ const HomePage = () => {
 
 
   {/* 홈 상단 특가 상품 섹션 */}
-  <HomeBest products={products} images={images} />
+  <HomeBest products={products} images={images} title="👀 가장 많이 담은 특가 상품!!" />
 
 
     {/* 홈 추천 상품 섹션 */}
