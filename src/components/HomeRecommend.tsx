@@ -1,34 +1,80 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { fetchProducts } from '../services/api';
 import type { Product } from '../types';
 import ProductCardNormal from './ProductCardNormal';
-import './HomeSections.css';
+import './HomeRecommend.css';
 
 type Props = {
-  products?: Product[];
-  images?: string[];
-  length?: number;
   title?: string;
-  containerWidth?: string | number;
-  className?: string;
 };
 
-const HomeRecommend: React.FC<Props> = ({ products = [], images = [], length = 4, title = '추천 상품', containerWidth = '1000px', className = '' }) => {
+// 카테고리 데이터
+const categories = [
+  { id: 'all', name: '전체', icon: '🍽️' },
+  { id: 'salad', name: '샐러드', icon: '🥗' },
+  { id: 'chicken', name: '닭가슴살', icon: '🍗' },
+  { id: 'fruit', name: '과일/채소', icon: '🥬' },
+  { id: 'bakery', name: '베이커리', icon: '🥐' },
+];
+
+const HomeRecommend: React.FC<Props> = ({ title = '금주의 추천 상품' }) => {
+  const [activeCategory, setActiveCategory] = useState('all');
+  const [products, setProducts] = useState<Product[]>([]);
+  const [filteredProducts, setFilteredProducts] = useState<Product[]>([]);
+
+  useEffect(() => {
+    fetchProducts().then((data) => {
+      // 더미 데이터로 확장 (실제로는 API에서 더 많은 상품을 받아올 것)
+      const extendedProducts = [...data, ...data].map((p, index) => ({
+        ...p,
+        id: `${p.id}-${index}`,
+      }));
+      setProducts(extendedProducts);
+      setFilteredProducts(extendedProducts.slice(0, 8));
+    });
+  }, []);
+
+  useEffect(() => {
+    if (activeCategory === 'all') {
+      setFilteredProducts(products.slice(0, 8));
+    } else {
+      const filtered = products
+        .filter((p) => p.category?.startsWith(activeCategory))
+        .slice(0, 8);
+      setFilteredProducts(filtered.length > 0 ? filtered : products.slice(0, 8));
+    }
+  }, [activeCategory, products]);
+
   return (
-    <div id="homeWrap" className={className}>
-      <section className="products-section recommend-section" style={{ width: '100%', maxWidth: containerWidth }}>
-        <h2 className="recommend-title">
-          <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#1f1f1f"><path d="M160-280v80h640v-80H160Zm0-440h88q-5-9-6.5-19t-1.5-21q0-50 35-85t85-35q30 0 55.5 15.5T460-826l20 26 20-26q18-24 44-39t56-15q50 0 85 35t35 85q0 11-1.5 21t-6.5 19h88q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720Zm0 320h640v-240H596l84 114-64 46-136-184-136 184-64-46 82-114H160v240Zm200-320q17 0 28.5-11.5T400-760q0-17-11.5-28.5T360-800q-17 0-28.5 11.5T320-760q0 17 11.5 28.5T360-720Zm240 0q17 0 28.5-11.5T640-760q0-17-11.5-28.5T600-800q-17 0-28.5 11.5T560-760q0 17 11.5 28.5T600-720Z"/></svg>
-          <p>{title}</p>
-          <svg xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 -960 960 960" width="30px" fill="#1f1f1f"><path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/></svg>
-        </h2>
-        <div className="product-row" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 16 }}>
-          {Array.from({ length }).map((_, i) => {
-            const p = products[i] ?? ({ id: `placeholder-${i}`, name: `상품 ${i + 1}`, price: 0, image: images[i] } as Product);
-            return <ProductCardNormal key={p.id} product={p} />;
-          })}
+    <section className="home-recommend-section">
+      <div className="home-recommend-container">
+        {/* 헤더 */}
+        <div className="home-recommend-header">
+          <h2 className="home-recommend-title">{title}</h2>
         </div>
-      </section>
-    </div>
+
+        {/* 카테고리 버튼 */}
+        <div className="home-recommend-categories">
+          {categories.map((category) => (
+            <button
+              key={category.id}
+              className={`category-btn ${activeCategory === category.id ? 'active' : ''}`}
+              onClick={() => setActiveCategory(category.id)}
+            >
+              <span className="category-icon">{category.icon}</span>
+              <span className="category-name">{category.name}</span>
+            </button>
+          ))}
+        </div>
+
+        {/* 상품 그리드 (8x2) */}
+        <div className="home-recommend-grid">
+          {filteredProducts.map((product) => (
+            <ProductCardNormal key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 };
 

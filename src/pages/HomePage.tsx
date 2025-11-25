@@ -8,7 +8,6 @@ import HomeMDPick from '../components/HomeMDPick';
 import HomeRecommend from '../components/HomeRecommend';
 import HomeRanking from '../components/HomeRanking';
 import './HomePage.css'
-import recommendProducts from '../data/recommendProducts';
 import AdBanner from '../components/AdBanner';
 
 const HomePage = () => {
@@ -37,7 +36,7 @@ const HomePage = () => {
   <HomeMDPick products={products} title="믿고 먹는 MD Pick" />
 
     {/* 홈 추천 상품 섹션 */}
-  <HomeRecommend products={recommendProducts} images={images} title="오늘의 추천 상품" containerWidth="1000px" />
+  <HomeRecommend title="금주의 추천 상품" />
 
      {/* 광고 섹션 */}
      <section className='ADWrap' style={{width:"100%", display:"flex", justifyContent:"center", alignItems:"center"}}>
