@@ -14,7 +14,6 @@ import ContactPage from './pages/ContactPage';
 import PromoPage from './pages/PromoPage';
 import MorePage from './pages/MorePage';
 import TopProductPage from './pages/TopProductPage';
-import MDPickPage from './pages/MDPickPage';
 import RankingPage from './pages/RankingPage';
 import { CartProvider } from './context/CartContext';
 
@@ -26,7 +25,6 @@ const AppRoutes = () => (
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductListPage />} />
           <Route path="/best" element={<TopProductPage />} />
-          <Route path="/mdpick" element={<MDPickPage />} />
           <Route path="/admin/products" element={<AdminProductsPage />} />
           <Route path="/products/:id" element={<ProductDetailPage />} />
           <Route path="/cart" element={<CartPage />} />
