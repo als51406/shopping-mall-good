@@ -1,3 +1,11 @@
+/* Link 래퍼 스타일 */
+.product-card-large-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  cursor: pointer;
+}
+
 /* 큰 사이즈 상품 카드 - Best Menu 스타일 */
 .product-card-large {
   width: 420px;
@@ -11,7 +19,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.product-card-large:hover {
+.product-card-large-link:hover .product-card-large {
   transform: translateY(-4px);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
 }

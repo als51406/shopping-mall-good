@@ -1,0 +1,255 @@
+.home-mdpick-section {
+  width: 100%;
+  background: #fff;
+  padding: 60px 20px;
+  margin: 40px 0;
+}
+
+.home-mdpick-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+.home-mdpick-header {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.home-mdpick-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.home-mdpick-icon {
+  font-size: 32px;
+}
+
+.home-mdpick-subtitle {
+  font-size: 16px;
+  color: #666;
+  margin: 0;
+}
+
+/* 메인 콘텐츠 */
+.home-mdpick-content {
+  display: grid;
+  grid-template-columns: 550px 1fr;
+  gap: 40px;
+  background: transparent;
+}
+
+/* 왼쪽 큰 이미지 */
+.home-mdpick-main-image {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e0e0e0 100%);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+.home-mdpick-main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.home-mdpick-main-image:hover img {
+  transform: scale(1.05);
+}
+
+.home-mdpick-banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #333;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 30px 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+}
+
+.home-mdpick-banner-text h3 {
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+
+.home-mdpick-banner-text h4 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+  color: #1f1f1f;
+}
+
+.home-mdpick-banner-text .highlight {
+  color: #ff4757;
+}
+
+/* 오른쪽 상품 리스트 */
+.home-mdpick-product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.home-mdpick-product-item {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  background: transparent;
+  border-bottom: 1px solid #e8e8e8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-mdpick-product-item:nth-child(1)
+
+.home-mdpick-product-item:last-child {
+  border-bottom: none;
+}
+
+.home-mdpick-product-item:hover {
+  opacity: 0.8;
+}
+
+/* 작은 이미지 */
+.home-mdpick-item-image {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.home-mdpick-item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 상품 정보 */
+.home-mdpick-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.home-mdpick-item-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.home-mdpick-item-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.home-mdpick-discount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff4757;
+}
+
+.home-mdpick-price-sale {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1f1f1f;
+}
+
+.home-mdpick-price-original {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.home-mdpick-price-range {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
+}
+
+.home-mdpick-item-rating {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.star {
+  font-size: 16px;
+}
+
+.rating-score {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.rating-count {
+  font-size: 14px;
+  color: #999;
+}
+
+/* 반응형 */
+@media (max-width: 1400px) {
+  .home-mdpick-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .home-mdpick-main-image {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-mdpick-section {
+    padding: 40px 16px;
+  }
+
+  .home-mdpick-title {
+    font-size: 24px;
+  }
+
+  .home-mdpick-banner-text h3 {
+    font-size: 20px;
+  }
+
+  .home-mdpick-banner-text h4 {
+    font-size: 28px;
+  }
+
+  .home-mdpick-main-image {
+    height: 400px;
+  }
+
+  .home-mdpick-product-item {
+    flex-direction: column;
+  }
+
+  .home-mdpick-item-image {
+    width: 100%;
+    height: 200px;
+  }
+}

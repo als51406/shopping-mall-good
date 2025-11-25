@@ -1,0 +1,323 @@
+.ranking-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f8f9fa;
+  padding: 40px 20px;
+}
+
+.ranking-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 헤더 */
+.ranking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.ranking-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #1f1f1f;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ranking-icon {
+  font-size: 32px;
+}
+
+.ranking-tabs {
+  display: flex;
+  gap: 8px;
+}
+
+.ranking-tab {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 24px;
+  background: #fff;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ranking-tab.active {
+  background: #1f1f1f;
+  color: #fff;
+}
+
+.ranking-tab:hover:not(.active) {
+  background: #f0f0f0;
+}
+
+/* 랭킹 섹션들 */
+.ranking-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.ranking-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Swiper 스타일 */
+.ranking-swiper {
+  padding: 20px 10px 50px;
+}
+
+.ranking-swiper .swiper-button-next,
+.ranking-swiper .swiper-button-prev {
+  color: #1f1f1f;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.ranking-swiper .swiper-button-next::after,
+.ranking-swiper .swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ranking-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #ddd;
+  opacity: 1;
+}
+
+.ranking-swiper .swiper-pagination-bullet-active {
+  background: #1f1f1f;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* 랭킹 아이템 */
+.ranking-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.ranking-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-color: #6A2EA8;
+}
+
+.ranking-number-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 10;
+  background: linear-gradient(135deg, #6A2EA8 0%, #8B4FD8 100%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(106, 46, 168, 0.3);
+}
+
+.ranking-number {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ranking-content {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.ranking-image {
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.ranking-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ranking-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.ranking-product-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1f1f1f;
+  margin: 0;
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.ranking-price-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.ranking-discount {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ff4757;
+}
+
+.ranking-price-sale {
+  font-size: 20px;
+  font-weight: 900;
+  color: #1f1f1f;
+}
+
+.ranking-price-original {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+  font-weight: 400;
+}
+
+.ranking-price-range {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.ranking-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: auto;
+}
+
+.ranking-rating .star {
+  font-size: 16px;
+}
+
+.ranking-rating .rating-score {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f1f1f;
+}
+
+.ranking-rating .rating-count {
+  font-size: 13px;
+  color: #999;
+}
+
+.ranking-cart-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: #1f1f1f;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-top: 1px solid #e8e8e8;
+}
+
+.ranking-cart-btn:hover {
+  background: #6A2EA8;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .ranking-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .ranking-swiper {
+    padding: 20px 5px 50px;
+  }
+}
+
+@media (max-width: 768px) {
+  .ranking-title {
+    font-size: 24px;
+  }
+
+  .ranking-icon {
+    font-size: 24px;
+  }
+
+  .ranking-section {
+    padding: 20px 15px;
+  }
+
+  .ranking-content {
+    flex-direction: column;
+  }
+
+  .ranking-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .ranking-swiper .swiper-button-next,
+  .ranking-swiper .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+  }
+
+  .ranking-swiper .swiper-button-next::after,
+  .ranking-swiper .swiper-button-prev::after {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ranking-page {
+    padding: 20px 10px;
+  }
+
+  .ranking-tabs {
+    width: 100%;
+  }
+
+  .ranking-tab {
+    flex: 1;
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+}
