@@ -24,7 +24,12 @@ const Category: React.FC<Props> = ({ categories = categoriesData, closeDelay = 5
   onMouseEnter={() => { if (timer.current) window.clearTimeout(timer.current); setOpen(true); }}
   onMouseLeave={() => { if (timer.current) window.clearTimeout(timer.current); timer.current = window.setTimeout(()=>{ setOpen(false); setActive(null); }, closeDelay); }}
     >
-  <button className="category-trigger" type="button">카테고리</button>
+  <button className="category-trigger" type="button">
+    <span>카테고리</span>
+    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f">
+      <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+    </svg>
+  </button>
       <div className={`category-panel ${open ? 'open' : ''}`}>
         <div className="category-left">
           <ul>

@@ -26,7 +26,7 @@ const AdBanner: React.FC<Props> = ({
   className = '',
 }) => {
   return (
-    <section style={{width: "100%", maxWidth: "1000px", margin: "0 auto"}} className={`ad-banner ${className}`}>
+    <section style={{width: "100%", maxWidth: "1000px", margin: "50px auto"}} className={`ad-banner ${className}`}>
       <Swiper modules={[Autoplay]} spaceBetween={0} slidesPerView={1} autoplay={{ delay: autoplayDelay, disableOnInteraction: false }} loop={loop}>
         {slides.map((s, idx) => (
           <SwiperSlide key={idx}>

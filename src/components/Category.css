@@ -1,6 +1,7 @@
 .category-wrapper { position: relative; display: inline-block; z-index: 10002; }
-.category-trigger { background: transparent; border:0; cursor:pointer; font-weight:600; padding:4px 6px; display:flex; align-items:center; gap:8px }
-.category-trigger::after { content: '▾'; margin-left:6px; font-size:12px; color:#666 }
+.category-trigger { background: transparent; border:0; cursor:pointer; font-weight:600; padding:4px 6px; display:flex; align-items:center; gap:6px; outline: none; }
+.category-trigger:focus { outline: none; }
+.category-trigger svg { width: 22px; height: 22px; }
 .category-panel { position: absolute; left: 0; top: 100%; width: 820px; background:#fff; border: 1px solid #eee; opacity: 0; transform: translateY(-6px); pointer-events: none; box-shadow: 0 8px 24px rgba(0,0,0,0.08); z-index: 99999; padding: 12px; transition: opacity .18s ease, transform .18s ease; border-radius:8px }
 .category-panel.open{ opacity: 1; transform: translateY(0); pointer-events: auto }
 .category-left { width: 260px; float: left; }

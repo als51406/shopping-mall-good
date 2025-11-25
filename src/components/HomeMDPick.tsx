@@ -50,7 +50,7 @@ const HomeMDPick: React.FC<Props> = ({ products = [], title = '믿고 먹는 MD 
             />
             <div className="home-mdpick-banner-text">
               <h3>오랫동안 사랑받는</h3>
-              <h4>식단레벨 <br/> <span className="highlight">필수템</span></h4>
+              <h4>식단러버 <br/> <span className="highlight">필수템</span></h4>
             </div>
           </div>
 
