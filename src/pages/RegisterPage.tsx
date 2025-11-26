@@ -33,6 +33,36 @@ const RegisterPage: React.FC = () => {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", padding: "60px 20px", minHeight: "60vh" }}>
+      {/* 신규회원 프로모션 배너 */}
+      <div style={{ 
+        width: "100%", 
+        maxWidth: "600px", 
+        background: "linear-gradient(135deg, #6A2EA8 0%, #8B4BC9 50%, #A66FE0 100%)",
+        padding: "40px 30px",
+        borderRadius: "16px",
+        marginBottom: "40px",
+        boxShadow: "0 8px 24px rgba(106, 46, 168, 0.3)",
+        textAlign: "center"
+      }}>
+        
+        <h2 style={{ 
+          fontSize: "36px", 
+          fontWeight: "bold", 
+          color: "#fff",
+          marginBottom: "12px",
+          textShadow: "2px 2px 4px rgba(0,0,0,0.2)"
+        }}>
+          첫 구매 30% 할인
+        </h2>
+        <p style={{ 
+          fontSize: "18px", 
+          color: "#FFE66D",
+          marginBottom: "0"
+        }}>
+          지금 가입하고 특별 쿠폰을 받아보세요!
+        </p>
+      </div>
+      
       <h1 style={{ fontSize: "32px", marginBottom: "30px", color: "#333" }}>회원가입</h1>
       <form onSubmit={submit} style={{ display: 'flex', flexDirection: 'column', gap: '16px', width: '100%', maxWidth: '400px' }}>
         <input value={name} onChange={e => setName(e.target.value)} placeholder="이름" style={{ padding: "14px", border: "1px solid #ddd", borderRadius: "8px", fontSize: "16px" }} />

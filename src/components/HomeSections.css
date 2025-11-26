@@ -8,11 +8,62 @@
   z-index: 1; /* Lower than header */
 }
 
+.banner-section .swiper {
+  width: 100%;
+  height: 100%;
+}
+
 .banner-slide {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
+  width: 100%;
+  height: 400px;
+  transition: height 0.3s ease;
+}
+
+.banner-content {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner-content h2 {
+  font-size: clamp(24px, 5vw, 48px);
+  margin-bottom: 16px;
+  font-weight: 700;
+  transition: font-size 0.3s ease;
+}
+
+.banner-content p {
+  font-size: clamp(14px, 3vw, 20px);
+  opacity: 0.95;
+  transition: font-size 0.3s ease;
+  width: 100%;
+  height: 400px;
+  transition: height 0.3s ease;
+}
+
+.banner-content {
+  padding: 40px 20px;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.banner-content h2 {
+  font-size: clamp(24px, 5vw, 48px);
+  margin-bottom: 16px;
+  font-weight: 700;
+  transition: font-size 0.3s ease;
+}
+
+.banner-content p {
+  font-size: clamp(14px, 3vw, 20px);
+  opacity: 0.95;
+  transition: font-size 0.3s ease;
 }
 
 /* 메인 배너 Swiper 버튼 - 글래스모피즘 (호버 시 나타남) */
@@ -147,6 +198,7 @@
 /* Best Menu 섹션 전용 스타일 */
 .best-menu-section {
   padding: 0px 20px;
+  transition: padding 0.3s ease;
 }
 
 .best-menu-title {
@@ -156,11 +208,13 @@
   color: #1f1f1f;
   margin: 100px 0 20px 0;
   display: block;
+  transition: all 0.3s ease;
 }
 
 .best-menu-section .swiper {
   width: 100%;
   padding-bottom: 60px;
+  transition: padding-bottom 0.3s ease;
 }
 
 .best-menu-section .swiper-slide {
@@ -185,7 +239,7 @@
   border-radius: 50%;
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  transition: all 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
   /* 파란색 기본 버튼 완전히 제거 */
   color: transparent !important;
   margin: -120px auto;
@@ -201,14 +255,14 @@
 
 /* SVG 화살표로 대체 */
 .best-menu-section .swiper-button-prev {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 24px 24px;
 }
 
 .best-menu-section .swiper-button-next {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 24px 24px;
@@ -223,11 +277,11 @@
 
 /* 호버 시에도 화살표 유지 */
 .best-menu-section .swiper-button-prev:hover {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='15 18 9 12 15 6'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 .best-menu-section .swiper-button-next:hover {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='9 18 15 12 9 6'%3E%3C/polyline%3E%3C/svg%3E");
 }
 
 .best-menu-section .swiper-pagination-bullet {
@@ -260,19 +314,193 @@
   gap: 16px;
 }
 
-@media (max-width: 1100px) {
-  .products-section {
-    width: 100%;
-    padding: 0 16px;
+/* 배너 반응형 스타일 */
+@media (max-width: 1200px) {
+  .banner-slide {
+    height: 350px;
   }
   
+  .banner-section .swiper-button-next,
+  .banner-section .swiper-button-prev {
+    margin: -20px 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-slide {
+    height: 300px;
+  }
+  
+  .banner-content {
+    padding: 30px 20px;
+  }
+  
+  .banner-section .swiper-button-next,
+  .banner-section .swiper-button-prev {
+    margin: -20px 60px;
+    width: 40px;
+    height: 40px;
+    background-size: 20px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-section {
+    margin-bottom: 24px;
+  }
+  
+  .banner-slide {
+    height: 250px;
+  }
+  
+  .banner-content {
+    padding: 20px 16px;
+  }
+  
+  .banner-section .swiper-button-next,
+  .banner-section .swiper-button-prev {
+    margin: -20px 20px;
+    width: 36px;
+    height: 36px;
+    background-size: 18px 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-slide {
+    height: 200px;
+  }
+  
+  .banner-content {
+    padding: 16px 12px;
+  }
+  
+  .banner-section .swiper-button-next,
+  .banner-section .swiper-button-prev {
+    margin: -20px 10px;
+    width: 32px;
+    height: 32px;
+    background-size: 16px 16px;
+  }
+}
+
+/* 특가 상품 섹션 반응형 강화 */
+@media (max-width: 1200px) {
   .best-menu-section {
-    padding: 40px 16px;
+    padding: 60px 20px;
+  }
+  
+  .best-menu-title {
+    font-size: 32px;
+    margin: 60px 0 30px 0;
+  }
+  
+  .best-menu-section .swiper {
+    padding-bottom: 50px;
+  }
+  
+  .best-menu-section .swiper-button-next,
+  .best-menu-section .swiper-button-prev {
+    width: 44px;
+    height: 44px;
+    margin: 0 20px;
+  }
+}
+
+@media (max-width: 992px) {
+  .best-menu-section {
+    padding: 50px 16px;
   }
   
   .best-menu-title {
     font-size: 28px;
-    margin-bottom: 30px;
+    margin: 40px 0 25px 0;
+  }
+  
+  .best-menu-section .swiper {
+    padding-bottom: 45px;
+  }
+  
+  .best-menu-section .swiper-button-next,
+  .best-menu-section .swiper-button-prev {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px;
+    background-size: 20px 20px;
+  }
+  
+  .best-menu-section .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .best-menu-section {
+    padding: 40px 12px;
+  }
+  
+  .best-menu-title {
+    font-size: 24px;
+    margin: 30px 0 20px 0;
+  }
+  
+  .best-menu-section .swiper {
+    padding-bottom: 40px;
+  }
+  
+  .best-menu-section .swiper-button-next,
+  .best-menu-section .swiper-button-prev {
+    width: 36px;
+    height: 36px;
+    margin: 0 5px;
+    background-size: 18px 18px;
+    opacity: 0.8;
+  }
+  
+  .best-menu-section .swiper-button-next:hover,
+  .best-menu-section .swiper-button-prev:hover {
+    opacity: 1;
+  }
+  
+  .best-menu-section .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .best-menu-section {
+    padding: 30px 10px;
+  }
+  
+  .best-menu-title {
+    font-size: 20px;
+    margin: 20px 0 15px 0;
+  }
+  
+  .best-menu-section .swiper {
+    padding-bottom: 35px;
+  }
+  
+  .best-menu-section .swiper-button-next,
+  .best-menu-section .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    margin: 0;
+    background-size: 16px 16px;
+  }
+  
+  .best-menu-section .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .products-section {
+    width: 100%;
+    padding: 0 16px;
   }
   
   .recommend-section {
