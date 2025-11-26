@@ -36,6 +36,15 @@ export const deleteProduct = async (id: string): Promise<boolean> => {
 };
 
 export const getProductsByCategory = async (category: string): Promise<Product[]> => {
+  // 상위 카테고리만 입력된 경우 (예: 'salad', 'chicken' 등)
+  // 해당 상위 카테고리의 모든 하위 카테고리 상품을 가져오기
+  if (!category.includes(':')) {
+    // 모든 상품을 가져와서 해당 상위 카테고리로 필터링
+    const allProducts = await fetchProducts();
+    return allProducts.filter(p => p.category && p.category.startsWith(category + ':'));
+  }
+  
+  // 하위 카테고리가 포함된 경우 기존 방식대로
   const res = await fetch(`${API_BASE}/products?category=${encodeURIComponent(category)}`);
   return res.json();
 };

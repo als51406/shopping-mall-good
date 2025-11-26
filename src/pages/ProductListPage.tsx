@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import { fetchProducts, getProductsByCategory, searchProducts } from '../services/api';
 import type { Product } from '../types';
 import ProductCardNormal from '../components/ProductCardNormal';
+import categoriesData from '../data/categories';
 import './ProductListPage.css';
 
 // 상품 목록 페이지: 카테고리별 상품 리스트를 표시하며, 필터 및 정렬 기능을 제공합니다.
 const ProductListPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const [searchParams] = useSearchParams();
+  const navigate = useNavigate();
   const category = searchParams.get('category');
   const search = searchParams.get('search');
   const sort = searchParams.get('sort');
@@ -58,11 +60,50 @@ const ProductListPage = () => {
     return '전체 상품';
   };
 
+  // 현재 카테고리의 하위 메뉴 가져오기
+  const getSubCategories = () => {
+    if (!category) return [];
+    const [main] = category.split(':');
+    const mainCategory = categoriesData.find(c => c.id === main);
+    return mainCategory?.subs || [];
+  };
+
+  const subCategories = getSubCategories();
+  const currentMainCategory = category ? category.split(':')[0] : null;
+
   return (
     <div className="product-list-page">
       <div className="page-header">
-        <h2>{getTitle()}</h2>
-        <span className="count">총 {products.length}개</span>
+        <div className="header-left">
+          <h2>{getTitle()}</h2>
+          <span className="count">총 {products.length}개</span>
+        </div>
+        
+        {subCategories.length > 0 && (
+          <div className="header-right">
+            <div className="sub-category-buttons">
+              <button 
+                className={category && !category.includes(':') ? 'active' : ''}
+                onClick={() => navigate(`/products?category=${currentMainCategory}`)}
+              >
+                전체
+              </button>
+              {subCategories.map((sub) => {
+                const subId = sub.to?.split('=')[1] || '';
+                const isActive = category === subId;
+                return (
+                  <button 
+                    key={sub.id}
+                    className={isActive ? 'active' : ''}
+                    onClick={() => navigate(sub.to || '#')}
+                  >
+                    {sub.name}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
       
       {products.length === 0 ? (

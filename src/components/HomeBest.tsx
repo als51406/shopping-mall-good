@@ -18,13 +18,16 @@ type Props = {
 
 const HomeBest: React.FC<Props> = ({ products = [], images = [], title = '가장 많이담은 특가 상품', containerWidth = '1320px', className = '' }) => {
   // Prepare display products (fill with placeholders if empty)
-  const displayProducts = products.length > 0 ? products : Array.from({ length: 6 }).map((_, i) => ({
+  const allProducts = products.length > 0 ? products : Array.from({ length: 6 }).map((_, i) => ({
     id: `placeholder-${i}`,
     name: `상품명 ${i + 1}`,
     description: '맛있는 음식을 만나보세요',
     price: Math.floor(Math.random() * 10000) + 10000,
     image: images[i % images.length] || '/images/item1.jpeg'
   } as Product));
+  
+  // 최대 3개의 슬라이드만 표시 (각 슬라이드당 3개 상품 = 총 9개 상품)
+  const displayProducts = allProducts.slice(0, 9);
 
   return (
     <div id="homeWrap" className={className}>

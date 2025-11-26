@@ -6,11 +6,17 @@
 
 .page-header {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
   margin-bottom: 24px;
   padding-bottom: 16px;
   border-bottom: 2px solid #333;
+}
+
+.page-header .header-left {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
 }
 
 .page-header h2 {
@@ -23,6 +29,43 @@
 .page-header .count {
   color: #888;
   font-size: 14px;
+}
+
+.page-header .header-right {
+  display: flex;
+  align-items: center;
+}
+
+.sub-category-buttons {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.sub-category-buttons button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  color: #333;
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.sub-category-buttons button:hover {
+  border-color: #6A2EA8;
+  color: #6A2EA8;
+  background-color: #f8f4fc;
+}
+
+.sub-category-buttons button.active {
+  background-color: #6A2EA8;
+  color: #fff;
+  border-color: #6A2EA8;
+  font-weight: 600;
 }
 
 .product-grid {
@@ -45,6 +88,26 @@
 }
 
 @media (max-width: 768px) {
+  .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .page-header .header-right {
+    width: 100%;
+  }
+
+  .sub-category-buttons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .sub-category-buttons button {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
   }
