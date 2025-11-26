@@ -42,7 +42,8 @@ a:hover {
 
 body {
   margin: 0;
-  display: block; /* Changed from flex to block to prevent layout issues */
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
   min-height: 100vh;
   background-color: var(--bg-body);
