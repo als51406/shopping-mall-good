@@ -82,6 +82,12 @@
   margin-top: auto;
 }
 
+.pc-price-discount {
+  font-size: 20px;
+  font-weight: 900;
+  color: #ff4757;
+}
+
 .pc-price-sale {
   font-size: 20px;
   font-weight: 900;

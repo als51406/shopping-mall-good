@@ -22,6 +22,7 @@ const ProductCard = ({ product, discount = 20 }: ProductCardProps) => {
           <h3 className="pc-title">{product.name}</h3>
           <p className="pc-description">{product.description || '맛있는 음식을 만나보세요'}</p>
           <div className="pc-price-wrapper">
+            <span className="pc-price-discount">{discount}%</span>
             <span className="pc-price-sale">{discountedPrice.toLocaleString()}원</span>
             <span className="pc-price-original">{originalPrice.toLocaleString()}원</span>
           </div>
