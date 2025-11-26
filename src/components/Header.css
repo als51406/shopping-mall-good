@@ -94,6 +94,8 @@
 
 /* 모바일 사이즈 (768px 이하) */
 @media (max-width: 768px) {
+  
+
   .promo {
     font-size: 13px;
     padding: 6px 10px;
@@ -120,7 +122,7 @@
   
   .logo {
     order: 1;
-    font-size: 20px;
+    font-size: 34px;
   }
   
   .search {
@@ -174,7 +176,7 @@
 /* 작은 모바일 사이즈 (480px 이하) */
 @media (max-width: 480px) {
   .logo {
-    font-size: 18px;
+    font-size: 34px;
   }
   
   .login-links {

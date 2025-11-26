@@ -90,6 +90,7 @@
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  flex: 1;
 }
 
 .home-ranking-image {
@@ -201,7 +202,110 @@
   color: #fff;
 }
 
-/* 반응형 */
+/* 반응형 - 상품 카드가 비례적으로 축소 */
+@media (max-width: 1200px) {
+  .home-ranking-section {
+    padding: 50px 18px;
+  }
+
+  .home-ranking-title {
+    font-size: 26px;
+  }
+
+  .home-ranking-image {
+    width: 110px;
+    height: 110px;
+  }
+
+  .home-ranking-product-name {
+    font-size: 15px;
+  }
+
+  .home-ranking-discount {
+    font-size: 17px;
+  }
+
+  .home-ranking-price-sale {
+    font-size: 19px;
+  }
+
+  .home-ranking-price-original {
+    font-size: 13px;
+  }
+
+  .home-ranking-price-range {
+    font-size: 12px;
+  }
+
+  .home-ranking-cart-btn {
+    padding: 11px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .home-ranking-section {
+    padding: 45px 16px;
+  }
+
+  .home-ranking-title {
+    font-size: 24px;
+  }
+
+  .home-ranking-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .home-ranking-number-badge {
+    width: 40px;
+    height: 40px;
+    top: 16px;
+    left: 16px;
+  }
+
+  .home-ranking-number {
+    font-size: 20px;
+  }
+
+  .home-ranking-product-name {
+    font-size: 14px;
+  }
+
+  .home-ranking-discount {
+    font-size: 16px;
+  }
+
+  .home-ranking-price-sale {
+    font-size: 18px;
+  }
+
+  .home-ranking-price-original {
+    font-size: 12px;
+  }
+
+  .home-ranking-price-range {
+    font-size: 11px;
+  }
+
+  .home-ranking-rating .star {
+    font-size: 15px;
+  }
+
+  .home-ranking-rating .rating-score {
+    font-size: 13px;
+  }
+
+  .home-ranking-rating .rating-count {
+    font-size: 12px;
+  }
+
+  .home-ranking-cart-btn {
+    padding: 10px;
+    font-size: 13px;
+  }
+}
+
 @media (max-width: 768px) {
   .home-ranking-section {
     padding: 40px 15px;
@@ -217,23 +321,136 @@
   }
 
   .home-ranking-content-wrapper {
-    flex-direction: column;
+    gap: 14px;
+    padding: 14px;
   }
 
   .home-ranking-image {
-    width: 100%;
-    height: 200px;
+    width: 90px;
+    height: 90px;
+  }
+
+  .home-ranking-number-badge {
+    width: 36px;
+    height: 36px;
+    top: 14px;
+    left: 14px;
+  }
+
+  .home-ranking-number {
+    font-size: 18px;
+  }
+
+  .home-ranking-product-name {
+    font-size: 13px;
+  }
+
+  .home-ranking-discount {
+    font-size: 15px;
+  }
+
+  .home-ranking-price-sale {
+    font-size: 17px;
+  }
+
+  .home-ranking-price-original {
+    font-size: 11px;
+  }
+
+  .home-ranking-price-range {
+    font-size: 10px;
+  }
+
+  .home-ranking-rating .star {
+    font-size: 14px;
+  }
+
+  .home-ranking-rating .rating-score {
+    font-size: 12px;
+  }
+
+  .home-ranking-rating .rating-count {
+    font-size: 11px;
+  }
+
+  .home-ranking-cart-btn {
+    padding: 10px;
+    font-size: 12px;
   }
 }
 
 @media (max-width: 480px) {
+  .home-ranking-section {
+    padding: 30px 12px;
+  }
+
   .home-ranking-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 12px;
+    margin-bottom: 24px;
   }
 
   .home-ranking-title {
     font-size: 20px;
+  }
+
+  .home-ranking-grid {
+    gap: 12px;
+  }
+
+  .home-ranking-content-wrapper {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .home-ranking-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .home-ranking-number-badge {
+    width: 32px;
+    height: 32px;
+    top: 12px;
+    left: 12px;
+  }
+
+  .home-ranking-number {
+    font-size: 16px;
+  }
+
+  .home-ranking-product-name {
+    font-size: 12px;
+  }
+
+  .home-ranking-discount {
+    font-size: 14px;
+  }
+
+  .home-ranking-price-sale {
+    font-size: 16px;
+  }
+
+  .home-ranking-price-original {
+    font-size: 10px;
+  }
+
+  .home-ranking-price-range {
+    font-size: 9px;
+  }
+
+  .home-ranking-rating .star {
+    font-size: 13px;
+  }
+
+  .home-ranking-rating .rating-score {
+    font-size: 11px;
+  }
+
+  .home-ranking-rating .rating-count {
+    font-size: 10px;
+  }
+
+  .home-ranking-cart-btn {
+    padding: 9px;
+    font-size: 11px;
   }
 }
