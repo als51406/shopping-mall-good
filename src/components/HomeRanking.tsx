@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { fetchProducts } from '../services/api';
+import useCart from '../hooks/useCart';
 import type { Product } from '../types';
 import './HomeRanking.css';
 
@@ -10,6 +11,7 @@ interface HomeRankingProps {
 
 const HomeRanking = ({ title = '🏆 실시간 인기 랭킹' }: HomeRankingProps) => {
   const [products, setProducts] = useState<Product[]>([]);
+  const { addToCart } = useCart();
 
   useEffect(() => {
     fetchProducts().then((data) => {
@@ -17,13 +19,17 @@ const HomeRanking = ({ title = '🏆 실시간 인기 랭킹' }: HomeRankingProp
     });
   }, []);
 
+  const handleAddToCart = (product: Product) => {
+    addToCart(product);
+    alert('장바구니에 상품이 담겼습니다! 🛒');
+  };
+
   // 더미 데이터로 확장 (실제로는 API에서 받아올 데이터)
   const rankingProducts = [
     ...products,
     ...products,
   ].slice(0, 6).map((product, index) => ({
     ...product,
-    id: `rank-${index + 1}`,
     rank: index + 1,
     discount: [62, 41, 49, 33, 26, 52][index] || 50,
     rating: 4.9,
@@ -46,19 +52,16 @@ const HomeRanking = ({ title = '🏆 실시간 인기 랭킹' }: HomeRankingProp
         {/* 헤더 */}
         <div className="home-ranking-header">
           <h2 className="home-ranking-title">{title}</h2>
-          <Link to="/ranking" className="home-ranking-more">
-            전체보기 →
-          </Link>
         </div>
 
         {/* 랭킹 그리드 */}
         <div className="home-ranking-grid">
           {rankingProducts.map((product) => (
-            <Link key={product.id} to={`/products/${product.id}`} className="home-ranking-item">
+            <div key={product.id} className="home-ranking-item">
               <div className="home-ranking-number-badge">
                 <span className="home-ranking-number">{product.rank}</span>
               </div>
-              <div className="home-ranking-content-wrapper">
+              <Link to={`/products/${product.id}`} className="home-ranking-content-wrapper">
                 <div className="home-ranking-image">
                   <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
                 </div>
@@ -82,9 +85,18 @@ const HomeRanking = ({ title = '🏆 실시간 인기 랭킹' }: HomeRankingProp
                     <span className="rating-count">({product.reviewCount.toLocaleString()})</span>
                   </div>
                 </div>
-              </div>
-              <button className="home-ranking-cart-btn">담기</button>
-            </Link>
+              </Link>
+              <button 
+                className="home-ranking-cart-btn"
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  handleAddToCart(product);
+                }}
+              >
+                담기
+              </button>
+            </div>
           ))}
         </div>
       </div>

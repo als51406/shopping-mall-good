@@ -46,9 +46,8 @@
 /* 랭킹 아이템 */
 .home-ranking-item {
   position: relative;
-  display: block;
-  text-decoration: none;
-  color: inherit;
+  display: flex;
+  flex-direction: column;
   background: #fff;
   border: 1px solid #e8e8e8;
   border-radius: 12px;
@@ -88,6 +87,9 @@
   display: flex;
   gap: 16px;
   padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .home-ranking-image {
@@ -196,6 +198,7 @@
 
 .home-ranking-cart-btn:hover {
   background: #6A2EA8;
+  color: #fff;
 }
 
 /* 반응형 */

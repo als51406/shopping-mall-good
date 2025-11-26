@@ -150,6 +150,9 @@
   display: flex;
   gap: 16px;
   padding: 16px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .ranking-image {
@@ -258,6 +261,7 @@
 
 .ranking-cart-btn:hover {
   background: #6A2EA8;
+  color: #fff;
 }
 
 /* 반응형 */

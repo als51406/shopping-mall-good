@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
 import { fetchProducts } from '../services/api';
@@ -84,7 +85,7 @@ const RankingPage = () => {
                     <div className="ranking-number-badge">
                       <span className="ranking-number">{product.rank}</span>
                     </div>
-                    <div className="ranking-content">
+                    <Link to={`/products/${product.id}`} className="ranking-content">
                       <div className="ranking-image">
                         <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
                       </div>
@@ -108,7 +109,7 @@ const RankingPage = () => {
                           <span className="rating-count">({product.reviewCount.toLocaleString()})</span>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                     <button className="ranking-cart-btn">담기</button>
                   </div>
                 </SwiperSlide>
@@ -132,7 +133,7 @@ const RankingPage = () => {
                     <div className="ranking-number-badge">
                       <span className="ranking-number">{product.rank}</span>
                     </div>
-                    <div className="ranking-content">
+                    <Link to={`/products/${product.id}`} className="ranking-content">
                       <div className="ranking-image">
                         <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
                       </div>
@@ -156,7 +157,7 @@ const RankingPage = () => {
                           <span className="rating-count">({product.reviewCount.toLocaleString()})</span>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                     <button className="ranking-cart-btn">담기</button>
                   </div>
                 </SwiperSlide>
@@ -180,7 +181,7 @@ const RankingPage = () => {
                     <div className="ranking-number-badge">
                       <span className="ranking-number">{product.rank}</span>
                     </div>
-                    <div className="ranking-content">
+                    <Link to={`/products/${product.id}`} className="ranking-content">
                       <div className="ranking-image">
                         <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
                       </div>
@@ -204,7 +205,7 @@ const RankingPage = () => {
                           <span className="rating-count">({product.reviewCount.toLocaleString()})</span>
                         </div>
                       </div>
-                    </div>
+                    </Link>
                     <button className="ranking-cart-btn">담기</button>
                   </div>
                 </SwiperSlide>
