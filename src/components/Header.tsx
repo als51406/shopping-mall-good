@@ -4,6 +4,8 @@ import { useState } from 'react';
 import useCart from '../hooks/useCart';
 import { useAuth } from '../context/AuthContext';
 import Category from './Category';
+import BlackFridayBanner from './BlackFridayBanner';
+import NewMemberBanner from './NewMemberBanner';
 
 const Header: React.FC = () => {
   const [q, setQ] = useState('');
@@ -66,7 +68,9 @@ const Header: React.FC = () => {
       </section>
       <section className="main-header-wrap">
         <div className='main-header'>
-            <h1 className="logo"><Link to="/">PURFIT MALL</Link></h1>
+            <h1 className="logo">
+              <Link to="/">PURFIT MALL</Link>
+            </h1>
             <form className="search" onSubmit={submit}>
               <input value={q} onChange={e => setQ(e.target.value)} placeholder="검색어를 입력해주세요" />
               <button type="submit">🔍</button>
@@ -80,7 +84,11 @@ const Header: React.FC = () => {
       </section>
       <section id='navWrap'>
         <nav className="main-nav">
-          <Category />
+          <div className="category-with-banner">
+            <NewMemberBanner />
+            <BlackFridayBanner />
+            <Category />
+          </div>
             <div className='nav-center'>
               <Link to="/products?sort=best">베스트</Link>
               <Link to="/products?sort=new">신상품</Link>

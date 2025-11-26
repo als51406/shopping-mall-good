@@ -1,0 +1,87 @@
+.black-friday-wrapper {
+    
+  position: absolute;
+  right: calc(100% + 50px);
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+}
+
+.black-friday-banner{
+  position: relative;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  gap:10px;
+  padding:10px 16px;
+  background:linear-gradient(135deg, #000 0%, #1a1a1a 100%);
+  border-radius:8px;
+  text-decoration:none;
+  transition:all 0.3s ease;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+}
+
+.black-friday-banner:hover{
+  transform:translateX(-2px);
+  box-shadow:0 4px 12px rgba(0,0,0,0.25);
+}
+
+.bf-close {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 1;
+  transition: all 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.black-friday-wrapper:hover .bf-close {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.bf-close:hover {
+  background: #fff;
+  transform: scale(1.15);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+}
+
+.bf-tag{
+  font-size:12px;
+  margin: 5px auto;
+  font-weight:800;
+  color:#fff;
+  background:#ff4444;
+  padding:5px 10px;
+  border-radius:4px;
+  letter-spacing:1px;
+  white-space: nowrap;
+}
+
+.bf-text{
+  font-size:14px;
+  font-weight:700;
+  color:#ffd700;
+  white-space:nowrap;
+}
+
+/* 1200px 이하에서 배너 완전히 숨김 */
+@media (max-width: 1200px) {
+  .black-friday-wrapper {
+    display: none !important;
+  }
+}

@@ -21,8 +21,20 @@
 
 
 
-.main-header-wrap {display: flex; justify-content: center; padding: 0 20px; background-color: #fff;}
+.main-header-wrap {
+  display: flex; 
+  justify-content: center; 
+  padding: 0 20px; 
+  background-color: #fff;
+}
+
 .main-header{width: 100%; max-width: 1000px; display:flex; justify-content: center; align-items:center; gap:16px; padding-bottom: 20px; flex-wrap: wrap;}
+
+.category-with-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
 
 .logo{font-size:24px; font-weight:700; color:var(--primary-color); white-space: nowrap;}
 .search{flex:1; display:flex; max-width:720px; margin:0 auto; min-width: 200px;}
@@ -38,33 +50,124 @@
 .main-nav > a > svg {padding-right: 10px; }
 .nav-right a {padding: 0;}
 
-/* @media (max-width:800px){
-  .search{max-width:100%}
-  .main-nav{overflow:auto;white-space:nowrap}
-  .top-row{padding:12px}
-} */
+/* 태블릿 사이즈 (1200px 이하) */
+@media (max-width: 1200px) {
+  .main-header-wrap {
+    padding: 0 16px;
+  }
+  
+  .main-header {
+    gap: 12px;
+  }
+  
+  .search {
+    max-width: 500px;
+  }
+  
+  #navWrap {
+    padding: 8px 0;
+  }
+  
+  .main-nav {
+    padding: 0 16px;
+  }
+}
 
+/* 모바일 사이즈 (768px 이하) */
 @media (max-width: 768px) {
+  .promo {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+  
+  .login-header {
+    padding: 6px 16px;
+  }
+  
+  .login-links {
+    font-size: 12px;
+    gap: 6px;
+  }
+  
+  .main-header-wrap {
+    padding: 0 12px;
+  }
+  
   .main-header {
     flex-direction: column;
     gap: 10px;
     padding-bottom: 10px;
   }
+  
+  .logo {
+    order: 1;
+    font-size: 20px;
+  }
+  
   .search {
     width: 100%;
     order: 3;
+    min-width: auto;
   }
+  
+  .search input {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .search button {
+    padding: 10px 12px;
+  }
+  
   .actions {
     width: 100%;
     justify-content: flex-end;
     order: 2;
+    gap: 8px;
   }
-  .logo {
-    order: 1;
+  
+  .icon {
+    font-size: 14px;
   }
+  
+  #navWrap {
+    padding: 8px 0;
+  }
+  
   .main-nav {
     justify-content: flex-start;
-    gap: 10px;
+    gap: 8px;
     overflow-x: auto;
+    padding: 0 12px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .main-nav a {
+    padding: 0 10px;
+    font-size: 14px;
+  }
+  
+  .category-with-banner {
+    width: auto;
+  }
+}
+
+/* 작은 모바일 사이즈 (480px 이하) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 18px;
+  }
+  
+  .login-links {
+    font-size: 11px;
+  }
+  
+  .icon {
+    font-size: 13px;
+  }
+  
+  .main-nav a {
+    padding: 0 8px;
+    font-size: 13px;
   }
 }
