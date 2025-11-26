@@ -13,11 +13,11 @@ const Footer = () => {
 
           <div className="footer-info">
             <h4>사업자 정보</h4>
-            <p><strong>대표:</strong> 홍길동</p>
+            <p><strong>대표:</strong> 김민성</p>
             <p><strong>주소:</strong> 서울특별시 강남구 테헤란로 123, 4층</p>
             <p><strong>사업자등록번호:</strong> 123-45-67890</p>
             <p><strong>통신판매업신고:</strong> 2024-서울강남-1234</p>
-            <p><strong>이메일:</strong> contact@purfit.com</p>
+            <p><strong>이메일:</strong> als51406@gmail.com</p>
             <p><strong>고객센터:</strong> 1588-1234 (평일 09:00-18:00)</p>
           </div>
 

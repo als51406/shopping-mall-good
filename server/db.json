@@ -316,7 +316,7 @@
       "id": "40",
       "name": "단백질 크래커",
       "price": 4200,
-      "image": "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=500",
+      "image": "/images/item48.jpeg",
       "description": "바삭한 고단백 크래커",
       "category": "bakery:snack"
     },
