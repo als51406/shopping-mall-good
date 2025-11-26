@@ -14,7 +14,7 @@ const ProductCardNormal = ({ product }: ProductCardProps) => {
     <div className="product-card-normal">
       <Link to={`/products/${product.id}`} style={{ width: '100%', display: 'block' }}>
         <div className="pcn-img-wrapper">
-          <img className='pcn-img-box' src={product.image || '/images/item1.jpg'} alt={product.name} />
+          <img className='pcn-img-box' src={product.image || '/images/item1.jpeg'} alt={product.name} />
         </div>
       </Link>
       

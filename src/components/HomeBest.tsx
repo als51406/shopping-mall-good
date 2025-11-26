@@ -23,7 +23,7 @@ const HomeBest: React.FC<Props> = ({ products = [], images = [], title = '가장
     name: `상품명 ${i + 1}`,
     description: '맛있는 음식을 만나보세요',
     price: Math.floor(Math.random() * 10000) + 10000,
-    image: images[i % images.length] || '/images/item1.jpg'
+    image: images[i % images.length] || '/images/item1.jpeg'
   } as Product));
 
   return (

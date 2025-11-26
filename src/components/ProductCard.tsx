@@ -15,7 +15,7 @@ const ProductCard = ({ product, discount = 20 }: ProductCardProps) => {
     <Link to={`/products/${product.id}`} className="product-card-large-link">
       <div className="product-card-large">
         <div className="pc-image-container">
-          <img src={product.image || '/images/item1.jpg'} alt={product.name} />
+          <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
           <span className="pc-discount-badge">{discount}%</span>
         </div>
         <div className="pc-info">

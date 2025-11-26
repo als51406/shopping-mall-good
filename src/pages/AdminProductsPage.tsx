@@ -120,7 +120,7 @@ const AdminProductsPage = () => {
                 {items.map(it => (
                   <tr key={it.id} style={{ borderBottom: '1px solid #eee' }}>
                     <td style={{ padding: '12px' }}>
-                      <img src={it.image || '/images/item1.jpg'} alt={it.name} style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '4px' }} />
+                      <img src={it.image || '/images/item1.jpeg'} alt={it.name} style={{ width: '50px', height: '50px', objectFit: 'cover', borderRadius: '4px' }} />
                     </td>
                     <td style={{ padding: '12px', fontWeight: '500' }}>{it.name}</td>
                     <td style={{ padding: '12px' }}>{it.price.toLocaleString()}원</td>

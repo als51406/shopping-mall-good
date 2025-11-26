@@ -29,7 +29,7 @@ const ProductDetailPage = () => {
       <div style={{ display: 'flex', gap: '40px', flexDirection: 'row', flexWrap: 'wrap' }}>
         <div style={{ flex: 1, minWidth: '300px' }}>
           <img 
-            src={product.image || '/images/item1.jpg'} 
+            src={product.image || '/images/item1.jpeg'} 
             alt={product.name} 
             style={{ width: '100%', borderRadius: '12px', aspectRatio: '1/1', objectFit: 'cover', background: '#f5f5f5' }} 
           />

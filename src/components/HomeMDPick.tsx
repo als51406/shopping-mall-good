@@ -45,7 +45,7 @@ const HomeMDPick: React.FC<Props> = ({ products = [], title = '믿고 먹는 MD 
           {/* 왼쪽: 큰 이미지 */}
           <div className="home-mdpick-main-image">
             <img 
-              src={(selectedProduct || mdPickProducts[0])?.image || '/images/item1.jpg'} 
+              src={(selectedProduct || mdPickProducts[0])?.image || '/images/item1.jpeg'} 
               alt={(selectedProduct || mdPickProducts[0])?.name || 'MD Pick'}
             />
             <div className="home-mdpick-banner-text">
@@ -69,7 +69,7 @@ const HomeMDPick: React.FC<Props> = ({ products = [], title = '믿고 먹는 MD 
                 >
                   {/* 왼쪽: 작은 이미지 */}
                   <div className="home-mdpick-item-image">
-                    <img src={product.image || '/images/item1.jpg'} alt={product.name} />
+                    <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
                   </div>
 
                   {/* 오른쪽: 정보 */}

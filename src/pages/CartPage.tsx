@@ -28,7 +28,7 @@ const CartPage = () => {
           <div style={{ borderTop: '2px solid #333' }}>
             {items.map(item => (
               <div key={item.id} style={{ display: 'flex', padding: '20px 0', borderBottom: '1px solid #eee', alignItems: 'center', gap: '20px' }}>
-                <img src={item.image || '/images/item1.jpg'} alt={item.name} style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '8px', background: '#f5f5f5' }} />
+                <img src={item.image || '/images/item1.jpeg'} alt={item.name} style={{ width: '80px', height: '80px', objectFit: 'cover', borderRadius: '8px', background: '#f5f5f5' }} />
                 <div style={{ flex: 1 }}>
                   <h3 style={{ fontSize: '16px', marginBottom: '8px' }}>{item.name}</h3>
                   <p style={{ fontWeight: 'bold' }}>{item.price.toLocaleString()}원</p>

@@ -5,7 +5,7 @@
 }
 
 .home-recommend-container {
-  max-width: 1320px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -81,7 +81,8 @@
 .home-recommend-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  gap: 16px;
+  width: 100%;
 }
 
 /* 반응형 */

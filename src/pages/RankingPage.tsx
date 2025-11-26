@@ -86,7 +86,7 @@ const RankingPage = () => {
                     </div>
                     <div className="ranking-content">
                       <div className="ranking-image">
-                        <img src={product.image || '/images/item1.jpg'} alt={product.name} />
+                        <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
                       </div>
                       <div className="ranking-info">
                         <h3 className="ranking-product-name">{product.name}</h3>
@@ -134,7 +134,7 @@ const RankingPage = () => {
                     </div>
                     <div className="ranking-content">
                       <div className="ranking-image">
-                        <img src={product.image || '/images/item1.jpg'} alt={product.name} />
+                        <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
                       </div>
                       <div className="ranking-info">
                         <h3 className="ranking-product-name">{product.name}</h3>
@@ -182,7 +182,7 @@ const RankingPage = () => {
                     </div>
                     <div className="ranking-content">
                       <div className="ranking-image">
-                        <img src={product.image || '/images/item1.jpg'} alt={product.name} />
+                        <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
                       </div>
                       <div className="ranking-info">
                         <h3 className="ranking-product-name">{product.name}</h3>

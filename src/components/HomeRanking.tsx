@@ -60,7 +60,7 @@ const HomeRanking = ({ title = '🏆 실시간 인기 랭킹' }: HomeRankingProp
               </div>
               <div className="home-ranking-content-wrapper">
                 <div className="home-ranking-image">
-                  <img src={product.image || '/images/item1.jpg'} alt={product.name} />
+                  <img src={product.image || '/images/item1.jpeg'} alt={product.name} />
                 </div>
                 <div className="home-ranking-info">
                   <h3 className="home-ranking-product-name">{product.name}</h3>
