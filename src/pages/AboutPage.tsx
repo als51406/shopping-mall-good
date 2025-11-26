@@ -2,7 +2,7 @@
 const AboutPage = () => {
   return (
     <div style={{ maxWidth: '1000px', margin: '40px auto', padding: '0 20px', textAlign: 'center' }}>
-      <h1 style={{ fontSize: '32px', color: '#6A2EA8', marginBottom: '20px' }}>건강한 식단의 시작, Diet Food Mall</h1>
+      <h1 style={{ fontSize: '32px', color: '#6A2EA8', marginBottom: '20px' }}>건강한 식단의 시작, PURFIT Mall</h1>
       <p style={{ fontSize: '18px', color: '#666', lineHeight: '1.6', marginBottom: '40px' }}>
         우리는 바쁜 현대인들이 더 쉽고 맛있게 건강을 챙길 수 있도록 돕습니다.<br />
         신선한 샐러드부터 든든한 닭가슴살까지, 엄선된 식단 관리 식품을 만나보세요.

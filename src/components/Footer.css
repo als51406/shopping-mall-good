@@ -1,0 +1,191 @@
+.footer {
+  width: 100%;
+  padding: 48px 0 24px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  color: #666;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 40px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #ddd;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.brand-name {
+  font-weight: 700;
+  font-size: 24px;
+  color: #6A2EA8;
+}
+
+.brand-desc {
+  font-size: 14px;
+  color: #888;
+  margin: 0;
+}
+
+.footer-info h4,
+.footer-links h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.footer-info p {
+  font-size: 13px;
+  line-height: 1.8;
+  color: #666;
+  margin: 4px 0;
+}
+
+.footer-info strong {
+  font-weight: 600;
+  color: #555;
+  margin-right: 4px;
+}
+
+.footer-links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links nav a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.footer-links nav a:hover {
+  color: #6A2EA8;
+}
+
+.footer-links nav .privacy-link {
+  font-weight: 600;
+  color: #333;
+}
+
+.footer-notice {
+  background: #fff9e6;
+  border: 1px solid #ffe066;
+  border-radius: 6px;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+}
+
+.portfolio-notice {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #666;
+  margin: 0;
+  text-align: center;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 16px;
+  position: relative;
+}
+
+.copyright {
+  font-size: 13px;
+  color: #888;
+  margin: 0;
+}
+
+.admin-link {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+  padding: 4px 10px;
+  background-color: #f0f0f0;
+  color: #666;
+  text-decoration: none;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.admin-link:hover {
+  background-color: #6A2EA8;
+  color: #fff;
+  border-color: #6A2EA8;
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 32px 0 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .footer-info p {
+    font-size: 12px;
+  }
+
+  .footer-links nav {
+    align-items: center;
+  }
+
+  .portfolio-notice {
+    font-size: 12px;
+  }
+
+  .footer-bottom {
+    padding-top: 20px;
+  }
+
+  .admin-link {
+    position: static;
+    transform: none;
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 10px;
+    padding: 3px 8px;
+  }
+}

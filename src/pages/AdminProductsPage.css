@@ -209,9 +209,13 @@
 .list-header {
   padding: 20px 30px;
   border-bottom: 1px solid #eee;
+}
+
+.list-header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 16px;
 }
 
 .list-title {
@@ -230,6 +234,74 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   width: 300px;
+}
+
+/* 상품 목록 내 카테고리 필터 */
+.list-category-filter {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.list-cat-btn {
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 20px;
+  background: #fff;
+  color: #666;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.list-cat-btn:hover {
+  border-color: #6A2EA8;
+  background: #f9f5ff;
+  color: #6A2EA8;
+}
+
+.list-cat-btn.active {
+  background: #6A2EA8;
+  color: #fff;
+  border-color: #6A2EA8;
+}
+
+/* 서브 카테고리 필터 */
+.list-sub-category {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.list-sub-btn {
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  background: #f9f9f9;
+  color: #666;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.list-sub-btn:hover {
+  border-color: #6A2EA8;
+  background: #f9f5ff;
+  color: #6A2EA8;
+}
+
+.list-sub-btn.active {
+  background: #6A2EA8;
+  color: #fff;
+  border-color: #6A2EA8;
 }
 
 .products-table {

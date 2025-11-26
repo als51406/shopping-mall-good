@@ -18,7 +18,7 @@ const MorePage: React.FC = () => {
         <section style={{ background: '#fff', padding: '30px', borderRadius: '12px', border: '1px solid #eee' }}>
           <h3 style={{ fontSize: '20px', marginBottom: '12px', color: '#6A2EA8' }}>제휴·입점 안내</h3>
           <p style={{ color: '#666', lineHeight: '1.6' }}>
-            Diet Food Mall과 함께 성장할 파트너를 찾습니다.<br />
+            PURFIT Mall과 함께 성장할 파트너를 찾습니다.<br />
             건강한 먹거리를 만드는 생산자님들의 연락을 기다립니다.
           </p>
         </section>

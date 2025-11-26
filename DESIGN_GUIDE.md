@@ -1,7 +1,7 @@
-# Design Guide - Diet Food Mall
+# Design Guide - PURFIT Mall
 
 ## 1. Brand Identity
-- **Brand Name:** Diet Food Mall (가칭)
+- **Brand Name:** PURFIT Mall
 - **Core Value:** 건강함, 신선함, 간편함
 - **Target Audience:** 식단 관리가 필요한 다이어터, 유지어터, 바쁜 현대인
 

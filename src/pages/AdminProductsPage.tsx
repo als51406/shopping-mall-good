@@ -249,15 +249,65 @@ const AdminProductsPage = () => {
       {/* 상품 목록 */}
       <div className="products-list">
         <div className="list-header">
-          <h3 className="list-title">📦 상품 목록</h3>
-          <div className="search-box">
-            <input 
-              className="search-input"
-              placeholder="상품명으로 검색..." 
-              value={searchQuery}
-              onChange={e => setSearchQuery(e.target.value)}
-            />
+          <div className="list-header-top">
+            <h3 className="list-title">📦 상품 목록</h3>
+            <div className="search-box">
+              <input 
+                className="search-input"
+                placeholder="상품명으로 검색..." 
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+              />
+            </div>
           </div>
+
+          {/* 상품 목록 내 카테고리 필터 버튼 */}
+          <div className="list-category-filter">
+            <button
+              className={`list-cat-btn ${selectedCategory === 'all' ? 'active' : ''}`}
+              onClick={() => setSelectedCategory('all')}
+            >
+              전체
+            </button>
+            {categories.map(cat => (
+              <button
+                key={cat.id}
+                className={`list-cat-btn ${selectedCategory === cat.id ? 'active' : ''}`}
+                onClick={() => setSelectedCategory(cat.id)}
+              >
+                {cat.icon} {cat.name}
+              </button>
+            ))}
+          </div>
+
+          {/* 서브 카테고리 필터 */}
+          {selectedCategory !== 'all' && (
+            <div className="list-sub-category">
+              <button
+                className={`list-sub-btn ${selectedCategory && !selectedCategory.includes(':') ? 'active' : ''}`}
+                onClick={() => {
+                  const mainCat = selectedCategory.split(':')[0];
+                  setSelectedCategory(mainCat);
+                }}
+              >
+                전체
+              </button>
+              {categories
+                .find(cat => cat.id === selectedCategory.split(':')[0])
+                ?.subs?.map(sub => {
+                  const subValue = sub.to?.split('category=')[1] || '';
+                  return (
+                    <button
+                      key={sub.id}
+                      className={`list-sub-btn ${selectedCategory === subValue ? 'active' : ''}`}
+                      onClick={() => setSelectedCategory(subValue)}
+                    >
+                      {sub.name}
+                    </button>
+                  );
+                })}
+            </div>
+          )}
         </div>
 
         {filteredItems.length === 0 ? (

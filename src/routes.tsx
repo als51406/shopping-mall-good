@@ -14,6 +14,8 @@ import ContactPage from './pages/ContactPage';
 import PromoPage from './pages/PromoPage';
 import MorePage from './pages/MorePage';
 import TopProductPage from './pages/TopProductPage';
+import TermsPage from './pages/TermsPage';
+import PrivacyPage from './pages/PrivacyPage';
 import { CartProvider } from './context/CartContext';
 
 const AppRoutes = () => (
@@ -35,6 +37,8 @@ const AppRoutes = () => (
           <Route path="/more" element={<MorePage />} />
           <Route path="/promo" element={<PromoPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/terms" element={<TermsPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
         </Routes>
       </MainLayout>
     </CartProvider>
