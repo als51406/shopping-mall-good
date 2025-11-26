@@ -69,7 +69,7 @@ const Header: React.FC = () => {
       <section className="main-header-wrap">
         <div className='main-header'>
             <h1 className="logo">
-              <Link to="/">PURFIT MALL</Link>
+              <Link to="/">Purfit Mall</Link>
             </h1>
             <form className="search" onSubmit={submit}>
               <input value={q} onChange={e => setQ(e.target.value)} placeholder="검색어를 입력해주세요" />

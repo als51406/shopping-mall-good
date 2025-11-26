@@ -101,24 +101,197 @@
   font-weight: 400;
 }
 
-/* 반응형 */
+/* 반응형 - 상품 카드 전체적으로 비례하여 축소 */
 @media (max-width: 1400px) {
   .product-card-large {
-    width: 100%;
-    max-width: 420px;
-    height: auto;
+    width: 380px;
+    height: 480px;
   }
   
   .pc-image-container {
-    width: 100%;
-    padding-top: 100%; /* 1:1 비율 유지 */
-    height: 0;
-    position: relative;
+    width: 380px;
+    height: 380px;
   }
   
-  .pc-image-container img {
-    position: absolute;
-    top: 0;
-    left: 0;
+  .pc-info {
+    padding: 18px;
+  }
+  
+  .pc-title {
+    font-size: 17px;
+  }
+  
+  .pc-description {
+    font-size: 13px;
+  }
+  
+  .pc-price-sale,
+  .pc-price-discount {
+    font-size: 18px;
+  }
+  
+  .pc-price-original {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .product-card-large {
+    width: 340px;
+    height: 440px;
+  }
+  
+  .pc-image-container {
+    width: 340px;
+    height: 340px;
+  }
+  
+  .pc-discount-badge {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+  
+  .pc-info {
+    padding: 16px;
+  }
+  
+  .pc-title {
+    font-size: 16px;
+  }
+  
+  .pc-description {
+    font-size: 12px;
+  }
+  
+  .pc-price-sale,
+  .pc-price-discount {
+    font-size: 17px;
+  }
+  
+  .pc-price-original {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 992px) {
+  .product-card-large {
+    width: 300px;
+    height: 400px;
+  }
+  
+  .pc-image-container {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .pc-discount-badge {
+    font-size: 13px;
+    padding: 6px 10px;
+    top: 12px;
+    left: 12px;
+  }
+  
+  .pc-info {
+    padding: 14px;
+    gap: 6px;
+  }
+  
+  .pc-title {
+    font-size: 15px;
+  }
+  
+  .pc-description {
+    font-size: 11px;
+  }
+  
+  .pc-price-sale,
+  .pc-price-discount {
+    font-size: 16px;
+  }
+  
+  .pc-price-original {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product-card-large {
+    width: 260px;
+    height: 350px;
+  }
+  
+  .pc-image-container {
+    width: 260px;
+    height: 260px;
+  }
+  
+  .pc-discount-badge {
+    font-size: 12px;
+    padding: 5px 10px;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .pc-info {
+    padding: 12px;
+    gap: 5px;
+  }
+  
+  .pc-title {
+    font-size: 14px;
+  }
+  
+  .pc-description {
+    font-size: 10px;
+  }
+  
+  .pc-price-sale,
+  .pc-price-discount {
+    font-size: 15px;
+  }
+  
+  .pc-price-original {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-card-large {
+    width: 220px;
+    height: 310px;
+  }
+  
+  .pc-image-container {
+    width: 220px;
+    height: 220px;
+  }
+  
+  .pc-discount-badge {
+    font-size: 11px;
+    padding: 4px 8px;
+    top: 8px;
+    left: 8px;
+  }
+  
+  .pc-info {
+    padding: 10px;
+    gap: 4px;
+  }
+  
+  .pc-title {
+    font-size: 13px;
+  }
+  
+  .pc-description {
+    font-size: 9px;
+  }
+  
+  .pc-price-sale,
+  .pc-price-discount {
+    font-size: 14px;
+  }
+  
+  .pc-price-original {
+    font-size: 11px;
   }
 }
