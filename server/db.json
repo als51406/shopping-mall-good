@@ -1,16 +1,396 @@
 {
   "products": [
-    { "id": "1", "name": "촉촉한 수비드 닭가슴살 100g (오리지널)", "price": 2500, "image": "/images/item1.jpeg", "description": "부드럽고 촉촉한 수비드 공법 닭가슴살", "category": "chicken:breast" },
-    { "id": "2", "name": "프레시 리코타 치즈 샐러드", "price": 6900, "image": "/images/item2.jpg", "description": "신선한 채소와 꾸덕한 리코타 치즈의 만남", "category": "salad:fresh" },
-    { "id": "3", "name": "한끼 든든 다이어트 도시락 6종", "price": 24500, "image": "/images/item3.jpg", "description": "영양 밸런스를 맞춘 간편 도시락", "category": "salad:lunchbox" },
-    { "id": "4", "name": "당도선별 스테비아 방울토마토 500g", "price": 5900, "image": "/images/item4.webp", "description": "설탕 뿌린 듯 달콤한 스테비아 토마토", "category": "fruit:seasonal" },
-    { "id": "5", "name": "무가당 매일두유 99.89 190ml x 24팩", "price": 14900, "image": "/images/item5.avif", "description": "설탕 첨가 없이 깔끔한 식물성 단백질", "category": "drink:milk" },
-    { "id": "6", "name": "통밀 베이글 3종 세트 (플레인/블루베리/어니언)", "price": 8900, "image": "/images/item6.jpg", "description": "식이섬유 가득한 쫄깃 통밀 베이글", "category": "bakery:bread" },
-    { "id": "7", "name": "꾸덕한 그릭요거트 500g", "price": 11000, "image": "/images/item7.jpg", "description": "단백질 함량이 높은 정통 그릭요거트", "category": "drink:yogurt" },
-    { "id": "8", "name": "저칼로리 곤약 젤리 (복숭아맛)", "price": 1500, "image": "/images/item8.jpg", "description": "배고플 때 부담 없는 4kcal 간식", "category": "bakery:jelly" },
-    { "id": "9", "name": "훈제 닭가슴살 슬라이스 1kg", "price": 18900, "image": "/images/item9.jpg", "description": "참나무 훈연 향이 가득한 닭가슴살", "category": "chicken:breast" },
-    { "id": "10", "name": "세척 믹스 채소 1kg (대용량)", "price": 9900, "image": "/images/item10.jpg", "description": "씻을 필요 없이 바로 먹는 신선 샐러드", "category": "fruit:veggie" },
-    { "id": "11", "name": "꿀고구마 3kg (특상)", "price": 15900, "image": "/images/item11.jpeg", "description": "에어프라이어에 딱 좋은 달콤한 고구마", "category": "fruit:root" },
-    { "id": "12", "name": "단백질 쉐이크 초코맛 750g", "price": 28000, "image": "/images/item12.jpg", "description": "맛있게 채우는 단백질 20g", "category": "chicken:shake" }
+    {
+      "id": "1",
+      "name": "촉촉한 수비드 닭가슴살 100g (오리지널)",
+      "price": 2500,
+      "image": "/images/item1.jpeg",
+      "description": "부드럽고 촉촉한 수비드 공법 닭가슴살",
+      "category": "chicken:breast"
+    },
+    {
+      "id": "2",
+      "name": "프레시 리코타 치즈 샐러드",
+      "price": 6900,
+      "image": "/images/item2.jpg",
+      "description": "신선한 채소와 꾸덕한 리코타 치즈의 만남",
+      "category": "salad:fresh"
+    },
+    {
+      "id": "3",
+      "name": "한끼 든든 다이어트 도시락 6종",
+      "price": 24500,
+      "image": "/images/item3.jpg",
+      "description": "영양 밸런스를 맞춘 간편 도시락",
+      "category": "salad:lunchbox"
+    },
+    {
+      "id": "4",
+      "name": "당도선별 스테비아 방울토마토 500g",
+      "price": 5900,
+      "image": "/images/item4.webp",
+      "description": "설탕 뿌린 듯 달콤한 스테비아 토마토",
+      "category": "fruit:seasonal"
+    },
+    {
+      "id": "5",
+      "name": "무가당 매일두유 99.89 190ml x 24팩",
+      "price": 14900,
+      "image": "/images/item5.avif",
+      "description": "설탕 첨가 없이 깔끔한 식물성 단백질",
+      "category": "drink:milk"
+    },
+    {
+      "id": "6",
+      "name": "통밀 베이글 3종 세트 (플레인/블루베리/어니언)",
+      "price": 8900,
+      "image": "/images/item6.jpg",
+      "description": "식이섬유 가득한 쫄깃 통밀 베이글",
+      "category": "bakery:bread"
+    },
+    {
+      "id": "7",
+      "name": "꾸덕한 그릭요거트 500g",
+      "price": 11000,
+      "image": "/images/item7.jpg",
+      "description": "단백질 함량이 높은 정통 그릭요거트",
+      "category": "drink:yogurt"
+    },
+    {
+      "id": "8",
+      "name": "저칼로리 곤약 젤리 (복숭아맛)",
+      "price": 1500,
+      "image": "/images/item8.jpg",
+      "description": "배고플 때 부담 없는 4kcal 간식",
+      "category": "bakery:jelly"
+    },
+    {
+      "id": "9",
+      "name": "훈제 닭가슴살 슬라이스 1kg",
+      "price": 18900,
+      "image": "/images/item9.jpg",
+      "description": "참나무 훈연 향이 가득한 닭가슴살",
+      "category": "chicken:breast"
+    },
+    {
+      "id": "10",
+      "name": "세척 믹스 채소 1kg (대용량)",
+      "price": 9900,
+      "image": "/images/item10.jpg",
+      "description": "씻을 필요 없이 바로 먹는 신선 샐러드",
+      "category": "fruit:veggie"
+    },
+    {
+      "id": "11",
+      "name": "꿀고구마 3kg (특상)",
+      "price": 15900,
+      "image": "/images/item11.jpeg",
+      "description": "에어프라이어에 딱 좋은 달콤한 고구마",
+      "category": "fruit:root"
+    },
+    {
+      "id": "12",
+      "name": "단백질 쉐이크 초코맛 750g",
+      "price": 28000,
+      "image": "/images/item12.jpg",
+      "description": "맛있게 채우는 단백질 20g",
+      "category": "chicken:shake"
+    },
+    {
+      "id": "13",
+      "name": "닭가슴살 시저 샐러드",
+      "price": 7900,
+      "image": "/images/item13.jpg",
+      "description": "클래식한 시저 드레싱과 신선한 닭가슴살",
+      "category": "salad:fresh"
+    },
+    {
+      "id": "14",
+      "name": "그릭 요거트 과일 샐러드",
+      "price": 8500,
+      "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500",
+      "description": "꾸덕한 그릭요거트와 신선한 제철과일",
+      "category": "salad:fresh"
+    },
+    {
+      "id": "15",
+      "name": "연어 아보카도 샐러드",
+      "price": 12900,
+      "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500",
+      "description": "오메가3 풍부한 연어와 아보카도의 조화",
+      "category": "salad:fresh"
+    },
+    {
+      "id": "16",
+      "name": "탄수화물 조절 도시락 (현미·닭가슴살·야채)",
+      "price": 6900,
+      "image": "https://images.unsplash.com/photo-1623428187969-5da2dcea5ebf?w=500",
+      "description": "영양 균형 잡힌 저탄수화물 도시락",
+      "category": "salad:lunchbox"
+    },
+    {
+      "id": "17",
+      "name": "저칼로리 냉파스타 샐러드",
+      "price": 7500,
+      "image": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=500",
+      "description": "곤약면으로 만든 상큼한 냉파스타",
+      "category": "salad:fresh"
+    },
+    {
+      "id": "18",
+      "name": "병샐러드 3종 세트",
+      "price": 15900,
+      "image": "https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=500",
+      "description": "휴대하기 편한 메이슨자 병샐러드",
+      "category": "salad:fresh"
+    },
+    {
+      "id": "19",
+      "name": "고단백 두부 스테이크 도시락",
+      "price": 6500,
+      "image": "https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=500",
+      "description": "식물성 단백질 가득한 두부 스테이크",
+      "category": "salad:lunchbox"
+    },
+    {
+      "id": "20",
+      "name": "고단백 닭가슴살 스테이크 (갈릭맛)",
+      "price": 3200,
+      "image": "https://images.unsplash.com/photo-1532550907401-a500c9a57435?w=500",
+      "description": "풍미 가득한 갈릭 시즈닝 닭가슴살",
+      "category": "chicken:breast"
+    },
+    {
+      "id": "21",
+      "name": "매콤 스파이시 닭가슴살 큐브",
+      "price": 2800,
+      "image": "https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=500",
+      "description": "한입 크기로 먹기 편한 매콤한 닭가슴살",
+      "category": "chicken:breast"
+    },
+    {
+      "id": "22",
+      "name": "훈연 닭안심 바베큐 200g",
+      "price": 4500,
+      "image": "/images/item22.jpeg",
+      "description": "부드러운 닭안심의 바베큐 훈연향",
+      "category": "chicken:breast"
+    },
+    {
+      "id": "23",
+      "name": "달걀 흰자 액상팩 (고단백)",
+      "price": 5900,
+      "image": "https://images.unsplash.com/photo-1582722872445-44dc5f7e3c8f?w=500",
+      "description": "순수 단백질만 담은 흰자 액상",
+      "category": "chicken:meat"
+    },
+    {
+      "id": "24",
+      "name": "단백질 그래놀라 오리지널",
+      "price": 12000,
+      "image": "/images/item24.jpg",
+      "description": "고단백 견과류 그래놀라",
+      "category": "chicken:shake"
+    },
+    {
+      "id": "25",
+      "name": "100% 분리유청단백질 WPI 바닐라",
+      "price": 35000,
+      "image": "https://images.unsplash.com/photo-1593095948071-474c5cc2989d?w=500",
+      "description": "순도 높은 WPI 단백질 파우더",
+      "category": "chicken:shake"
+    },
+    {
+      "id": "26",
+      "name": "고단백 두부 스크램블팩",
+      "price": 4800,
+      "image": "https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=500",
+      "description": "간편하게 먹는 고단백 두부 스크램블",
+      "category": "chicken:meat"
+    },
+    {
+      "id": "27",
+      "name": "제철 딸기 1kg",
+      "price": 18900,
+      "image": "https://images.unsplash.com/photo-1464965911861-746a04b4bca6?w=500",
+      "description": "당도 높은 국내산 제철 딸기",
+      "category": "fruit:seasonal"
+    },
+    {
+      "id": "28",
+      "name": "블루베리 500g",
+      "price": 9900,
+      "image": "https://images.unsplash.com/photo-1498557850523-fd3d118b962e?w=500",
+      "description": "안토시아닌 풍부한 신선 블루베리",
+      "category": "fruit:seasonal"
+    },
+    {
+      "id": "29",
+      "name": "파인애플 컵 4팩",
+      "price": 7500,
+      "image": "https://images.unsplash.com/photo-1589820296156-2454bb8a6ad1?w=500",
+      "description": "간편하게 즐기는 컵 파인애플",
+      "category": "fruit:seasonal"
+    },
+    {
+      "id": "30",
+      "name": "찐 고구마 스틱 10팩",
+      "price": 12000,
+      "image": "/images/item30.jpg",
+      "description": "전자레인지 1분이면 OK, 간편 고구마",
+      "category": "fruit:root"
+    },
+    {
+      "id": "31",
+      "name": "찐 브로콜리 300g",
+      "price": 4500,
+      "image": "https://images.unsplash.com/photo-1459411621453-7b03977f4bfc?w=500",
+      "description": "영양 가득 세척·손질된 찐 브로콜리",
+      "category": "fruit:veggie"
+    },
+    {
+      "id": "32",
+      "name": "오이·파프리카 스낵팩",
+      "price": 3900,
+      "image": "https://images.unsplash.com/photo-1563565375-f3fdfdbefa83?w=500",
+      "description": "씻어서 바로 먹는 스틱 채소",
+      "category": "fruit:veggie"
+    },
+    {
+      "id": "33",
+      "name": "아보카도 5입",
+      "price": 8900,
+      "image": "https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?w=500",
+      "description": "불포화지방산 가득한 신선 아보카도",
+      "category": "fruit:seasonal"
+    },
+    {
+      "id": "34",
+      "name": "단백질 쿠키 오리지널",
+      "price": 2500,
+      "image": "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500",
+      "description": "단백질 10g이 들어간 맛있는 쿠키",
+      "category": "bakery:snack"
+    },
+    {
+      "id": "35",
+      "name": "고단백 브라우니 1팩",
+      "price": 3200,
+      "image": "https://images.unsplash.com/photo-1607920591413-4ec007e70023?w=500",
+      "description": "죄책감 없는 고단백 초코 브라우니",
+      "category": "bakery:snack"
+    },
+    {
+      "id": "36",
+      "name": "통밀 토스트 식빵",
+      "price": 4500,
+      "image": "https://images.unsplash.com/photo-1509440159596-0249088772ff?w=500",
+      "description": "식이섬유 풍부한 100% 통밀빵",
+      "category": "bakery:bread"
+    },
+    {
+      "id": "37",
+      "name": "단백질 에너지바 10개입",
+      "price": 18000,
+      "image": "https://images.unsplash.com/photo-1576618148400-f54bed99fcfd?w=500",
+      "description": "간편하게 먹는 고단백 에너지바",
+      "category": "bakery:snack"
+    },
+    {
+      "id": "38",
+      "name": "무설탕 그래놀라바",
+      "price": 15000,
+      "image": "/images/item38.avif",
+      "description": "설탕 제로, 천연 감미료 사용",
+      "category": "bakery:snack"
+    },
+    {
+      "id": "39",
+      "name": "곤약 젤리 사과맛",
+      "price": 1500,
+      "image": "/images/item39.avif",
+      "description": "상큼한 사과맛 저칼로리 젤리",
+      "category": "bakery:jelly"
+    },
+    {
+      "id": "40",
+      "name": "단백질 크래커",
+      "price": 4200,
+      "image": "https://images.unsplash.com/photo-1598971639058-fab3c3109a00?w=500",
+      "description": "바삭한 고단백 크래커",
+      "category": "bakery:snack"
+    },
+    {
+      "id": "41",
+      "name": "저칼로리 팝콘 (20kcal)",
+      "price": 2800,
+      "image": "https://images.unsplash.com/photo-1578849278619-e73505e9610f?w=500",
+      "description": "한 봉지 20kcal 에어팝콘",
+      "category": "bakery:snack"
+    },
+    {
+      "id": "42",
+      "name": "무지방 우유 1L",
+      "price": 3200,
+      "image": "https://images.unsplash.com/photo-1550583724-b2692b85b150?w=500",
+      "description": "지방 제로 고칼슘 우유",
+      "category": "drink:milk"
+    },
+    {
+      "id": "43",
+      "name": "프로틴 스무디 250ml",
+      "price": 3800,
+      "image": "https://images.unsplash.com/photo-1505252585461-04db1eb84625?w=500",
+      "description": "단백질 20g 함유 과일 스무디",
+      "category": "drink:milk"
+    },
+    {
+      "id": "44",
+      "name": "저칼로리 홍차 라떼",
+      "price": 2500,
+      "image": "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=500",
+      "description": "부드러운 무설탕 홍차라떼",
+      "category": "drink:coffee"
+    },
+    {
+      "id": "45",
+      "name": "녹차/보이차 티백 세트",
+      "price": 9900,
+      "image": "https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?w=500",
+      "description": "프리미엄 녹차와 보이차 30개입",
+      "category": "drink:coffee"
+    },
+    {
+      "id": "46",
+      "name": "콜드브루 스위트프리 500ml",
+      "price": 3500,
+      "image": "https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=500",
+      "description": "무설탕 콜드브루 원액",
+      "category": "drink:coffee"
+    },
+    {
+      "id": "47",
+      "name": "비건 요거트 3팩",
+      "price": 6900,
+      "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=500",
+      "description": "식물성 재료로 만든 비건 요거트",
+      "category": "drink:yogurt"
+    },
+    {
+      "id": "48",
+      "name": "클렌즈 주스 3종",
+      "price": 12000,
+      "image": "https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=500",
+      "description": "디톡스 효과 클렌즈 주스 세트",
+      "category": "drink:milk"
+    },
+    {
+      "id": "49",
+      "name": "콤부차 라이트 350ml",
+      "price": 4200,
+      "image": "/images/item49.jpeg",
+      "description": "프로바이오틱스 가득한 발효 음료",
+      "category": "drink:coffee"
+    }
   ]
 }
