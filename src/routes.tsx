@@ -19,7 +19,7 @@ import PrivacyPage from './pages/PrivacyPage';
 import { CartProvider } from './context/CartContext';
 
 const AppRoutes = () => (
-  <BrowserRouter>
+  <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
     <CartProvider>
       <MainLayout>
         <Routes>
