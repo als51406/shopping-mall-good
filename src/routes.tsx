@@ -18,9 +18,14 @@ import TermsPage from './pages/TermsPage';
 import PrivacyPage from './pages/PrivacyPage';
 import { CartProvider } from './context/CartContext';
 
-const AppRoutes = () => (
-  <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-    <CartProvider>
+const AppRoutes = () => {
+  // 개발 환경에서는 basename을 사용하지 않음
+  // 프로덕션 빌드일 때만 /shoppingmall 사용
+  const basename = import.meta.env.DEV ? '' : '/shoppingmall';
+  
+  return (
+    <BrowserRouter basename={basename} future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+      <CartProvider>
       <MainLayout>
         <Routes>
           <Route path="/" element={<HomePage />} />
@@ -43,6 +48,7 @@ const AppRoutes = () => (
       </MainLayout>
     </CartProvider>
   </BrowserRouter>
-);
+  );
+};
 
 export default AppRoutes;
