@@ -239,8 +239,8 @@ const AdminProductsPage = () => {
               </button>
             </>
           ) : (
-            <button onClick={onAdd} className="btn btn-primary">
-              ➕ 상품 추가
+            <button onClick={onAdd} className="btn btn-primary btn-add">
+              상품 추가
             </button>
           )}
         </div>
